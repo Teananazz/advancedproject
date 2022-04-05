@@ -1,9 +1,7 @@
 
 
-
-
+import TextForm from './LoginScreen/TextForm'
 import React from 'react'
-import { useState } from 'react'
 
 // after joke 2
 //after joke 3
@@ -24,8 +22,9 @@ const App =
                
             <div className='container'>
                
-             <button type="button" class="btn btn-primary">Primary</button>
+               <TextForm name = "Kek" />
 
+                  
                 </div>
 
             </>
