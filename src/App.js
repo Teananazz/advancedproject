@@ -3,7 +3,7 @@
 import TextForm from './LoginScreen/TextForm'
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+
 import { FiUser } from 'react-icons/fi';
 import { AiFillLock } from 'react-icons/ai';
 import UserAuth from './LoginScreen/UserAuth';
