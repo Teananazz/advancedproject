@@ -1,29 +1,46 @@
 
-import Button from 'react-bootstrap/Button';
 import React from 'react'
+import { FiUser } from 'react-icons/fi';
+import { AiFillLock } from 'react-icons/ai';
+import onAttempt from './../App.js'
+import Icon_Handler from './../App.js';
 
 const TextForm =
 
-    ({ name }) => {
+    ({ name }, { password = '' }) => {
+
+      
+        const Changed =
+            (e ,props) => {
+
+                onAttempt(e)
+                console.log(e, props)
+
+            }
 
         return (
-           <div> 
-                <button type="button" className="btn btn-primary">{name}</button>
-                <>
-                    <Button variant="primary">Primary</Button>{' '}
-                    <Button variant="secondary">Secondary</Button>{' '}
-                    <Button variant="success">Success</Button>{' '}
-                    <Button variant="warning">Warning</Button>{' '}
-                    <Button variant="danger">Danger</Button>
-                    <Button variant="info">Info</Button>{' '}
-                    <Button variant="light">Light</Button>
-                    <Button variant="dark">Dark</Button>{' '}
-                    <Button variant="link">Link</Button>
-                </>
-             </div>
- 
+
+            <div className="input-group mb-3">
+                <span className="input-group-text" id="basic-addon1">   {Icon_Handler({ name })}   </span>
+                <input type="text"
+                    value={password}
+                    onChange={Changed}
+                    className="form-control"
+                    placeholder={name}
+                    aria-label={name}
+                    aria-describedby="basic-addon1" />
+            </div>
+
+        
+                
+               
+
+
+
+
             )
 
     }
+
 
 export default TextForm

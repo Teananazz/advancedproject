@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-const Element = document.getElementById("root");
-const root = ReactDOM.createRoot(Element);
-root.render(<App />);
+const Root_Element = document.getElementById("root");
+
+const root = ReactDOM.createRoot(Root_Element);
+const Rendered_elements = <App />
+
+root.render(Rendered_elements);
