@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { FiUser } from 'react-icons/fi';
 import { AiFillLock } from 'react-icons/ai';
@@ -21,7 +20,7 @@ const TextForm =
         return (
 
             <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">   {Icon_Handler({ name })}   </span>
+                <span className="input-group-text" id="basic-addon1">   {Icon_Handler({ name })} </span>
                 <input type="text"
                     value={password}
                     onChange={Changed}
@@ -30,13 +29,6 @@ const TextForm =
                     aria-label={name}
                     aria-describedby="basic-addon1" />
             </div>
-
-        
-                
-               
-
-
-
 
             )
 
