@@ -6,45 +6,63 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react'
+import { AiFillEyeInvisible } from 'react-icons/ai'
+import { AiFillEye} from 'react-icons/ai'
 
-
-const LoginScreen =
-    () => {
+ const LoginScreen =
+ () => {
         const [user, setUser] = useState('')
         const [password, setPassword] = useState('')
+     const [passType, setType] = useState("password")
+     const Icon_Handler =
+         (name) => {
 
-        const Icon_Handler =
-            (name) => {
+             if (name === "Username") {
+                 return (<FiUser />)
+             }
+             if (name === "Password") {
+                 return (<AiFillLock />)
+             }
+             if (name === "password") {
+                 return (<AiFillEyeInvisible/>)
+             }
+             if (name === "text") {
+                 return (<AiFillEye />)
+             }
 
-                if (name === "Username") {
-                    return (<FiUser />)
-                }
-                if (name === "Password") {
-                    return (<AiFillLock />)
-                }
+         }
 
-            }
+     const onAttempt =
+         () => {
+             if (user === '' || password === '') {
+                 alert(" One or more fields empty")
+                 return;
+             }
 
-        const onAttempt =
-            () => {
-                if (user === '' || password === '') {
-                    alert(" One or more fields empty")
-                    return;
-                }
+             var check = UserAuth({ user }, { password })
+             if (!check) {
 
-                var check = UserAuth({ user }, { password })
-                if (!check) {
+                 alert("Incorrect user/password")
+                 return;
+             }
 
-                    alert("Incorrect user/password")
-                    return;
-                }
+             alert("Connecting ") // just for checking - later will change
 
-                alert("Connecting ") // just for checking - later will change
+         }
 
-            }
+     const togglePassword =
+         () => {
 
-        return (
-            <>
+             if (passType === "password") {
+                 setType("text")
+                 return;
+             }
+             setType("password")
+
+         }
+
+     return (
+              <>
                 <div className="input-group mb-3">
                     <span className="input-group-text"
                         id="basic-addon1">   {Icon_Handler("Username")}   </span>
@@ -66,7 +84,7 @@ const LoginScreen =
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
-                    <input type="text"
+                 <input type={passType}
                         value={password}
                         onChange=
                         {(e) => {
@@ -76,41 +94,47 @@ const LoginScreen =
                         className="form-control"
                         placeholder="Password"
                         aria-label="Password"
-                        aria-describedby="basic-addon1" />
+                     aria-describedby="basic-addon1" />
+
+                 <div className="input-group-btn">
+                     <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  >
+                         {Icon_Handler( passType )}
+                     </button>
+                     </div>
                 </div>
-                <>
+             <>
 
 
 
-                    <div class="flexbuttons">
+                 <div class="flexbuttons">
 
 
-                        <Button
-                            onClick={onAttempt}
-                            as="input"
-                            type="button"
-                            variant="btn btn-outline-warning"
-                            value="login"
-                            className="Test1"
-                        />
+                     <Button
+                         onClick={onAttempt}
+                         as="input"
+                         type="button"
+                         variant="btn btn-outline-warning"
+                         value="login"
+                         className="Test1"
+                     />
 
-                        <Button
-                            as="input"
-                            type="button"
-                            variant="btn btn-outline-warning"
-                            value="Register"
-                            className="Test2"
-                        />{''}
-                    </div>
-
-
+                     <Button
+                         as="input"
+                         type="button"
+                         variant="btn btn-outline-warning"
+                         value="Register"
+                         className="Test2"
+                     />{''}
+                 </div>
 
 
-                </>
 
-            </>
 
-        )
+             </>
+     
+         </>
+
+         )
     }
 
 export default LoginScreen;
