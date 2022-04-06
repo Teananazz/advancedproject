@@ -2,29 +2,34 @@
 import React from 'react'
 import { FiUser } from 'react-icons/fi';
 import { AiFillLock } from 'react-icons/ai';
+import onAttempt from './../App.js'
+import Icon_Handler from './../App.js';
 
 const TextForm =
 
-    ({ name }, props , event) => {
+    ({ name }, { password = '' }) => {
 
-        const Icon_Handler =
-            () => {
-               
-                if (name == "Username") {
-                    return ( <FiUser/>)
-                }
-                if (name == "Password") {
-                    return (<AiFillLock />)
-                }
-                
-            }
       
+        const Changed =
+            (e ,props) => {
+
+                onAttempt(e)
+                console.log(e, props)
+
+            }
 
         return (
+
             <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">   {Icon_Handler() }   </span>
-                <input type="text"   className="form-control" placeholder={name} aria-label={name} aria-describedby="basic-addon1"/>
-                   </div>
+                <span className="input-group-text" id="basic-addon1">   {Icon_Handler({ name })}   </span>
+                <input type="text"
+                    value={password}
+                    onChange={Changed}
+                    className="form-control"
+                    placeholder={name}
+                    aria-label={name}
+                    aria-describedby="basic-addon1" />
+            </div>
 
         
                 

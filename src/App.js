@@ -92,13 +92,7 @@ const App =
 
              
                 <div class="flexbuttons">
-                    <Button
-                        as="input"
-                        type="button"
-                        variant="btn btn-outline-warning"
-                        value="Register"
-                        className ="Test2"
-                    />{''}
+                    
 
                     <Button
                         onClick={onAttempt}
@@ -108,6 +102,14 @@ const App =
                         value="login"
                        className = "Test1"
                     />
+
+                    <Button
+                        as="input"
+                        type="button"
+                        variant="btn btn-outline-warning"
+                        value="Register"
+                        className ="Test2"
+                    />{''}
                 </div>
 
              
