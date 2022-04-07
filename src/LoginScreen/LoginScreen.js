@@ -53,7 +53,7 @@ import Eyehook from "../hooks/Eyehook"
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
-                    <input type={Eye.value} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
+                    <input type={Eye.m} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
                     <div className="input-group-btn">
                         <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="form-control"  > {IconHandle(Eye.value)} </button>
 
