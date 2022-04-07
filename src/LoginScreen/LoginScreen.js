@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react'
 import useInput from "../hooks/UserInput";
-import IconHandle from "../LoginScreen/IconHandler"
+import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 
  const LoginScreen =
