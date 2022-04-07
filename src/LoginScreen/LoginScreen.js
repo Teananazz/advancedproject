@@ -1,37 +1,19 @@
-import { FiUser } from 'react-icons/fi';
-import { AiFillLock } from 'react-icons/ai';
-import UserAuth from './UserAuth';
 
+import UserAuth from './UserAuth';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react'
-import { AiFillEyeInvisible } from 'react-icons/ai'
-import { AiFillEye} from 'react-icons/ai'
 import useInput from "../hooks/UserInput";
+import IconHandle from "../LoginScreen/IconHandler"
+import Eyehook from "../hooks/Eyehook"
+
  const LoginScreen =
      () => {
          const user = useInput("");
          const password = useInput("");
-       
-     const [passType, setType] = useState("password")
-     const Icon_Handler =
-         (name) => {
-
-             if (name === "Username") {
-                 return (<FiUser />)
-             }
-             if (name === "Password") {
-                 return (<AiFillLock />)
-             }
-             if (name === "password") {
-                 return (<AiFillEyeInvisible/>)
-             }
-             if (name === "text") {
-                 return (<AiFillEye />)
-             }
-
-         }
+         const Eye = Eyehook("password");
+     
 
      const onAttempt =
          () => {
@@ -51,55 +33,40 @@ import useInput from "../hooks/UserInput";
 
          }
 
-     const togglePassword =
-         () => {
-
-             if (passType === "password") {
-                 setType("text")
-                 return;
-             }
-             setType("password")
-
-         }
+    
       
-     return (
-      <>
-         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon1"> {Icon_Handler("Username")}  </span>      
-                 <input type="text" value={user.value} onChange={user.onChange} className ="form-control" placeholder="Username"  />
-                     
-         </div>
+        return (
+            <>
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1"> {IconHandle("Username")}  </span>
+                    <input type="text" value={user.value} onChange={user.onChange} className="form-control" placeholder="Username" />
+
+                </div>
 
 
-          <div className="input-group mb-3">
-           <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
-                 <input type={passType} value={password.value} onChange={password.onChange} className = "form-control" placeholder ="Password"  / >
-           <div className="input-group-btn">
-            <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  > {Icon_Handler(passType)} </button>
-                         
-           </div>
-          </div>
-             <>
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">   {IconHandle("Password")}   </span>
+                    <input type={Eye.value} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
+                    <div className="input-group-btn">
+                        <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="form-control"  > {IconHandle(Eye.value)} </button>
 
-
-
-                 <div class="flexbuttons">
+                    </div>
+                </div>
+                <>
 
 
 
-                     <Button onClick={onAttempt} as ="input" type = "button" variant ="btn btn-outline-warning" value="login" className ="Test1"/>
+                    <div class="flexbuttons">
+                        <Button onClick={onAttempt} as="input" type="button" variant="btn btn-outline-warning" value="login" className="Test1" />
 
+                        <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />
 
+                    </div>
+                </>
 
+            </>
 
-                     <Button as ="input" type ="button" variant ="btn btn-outline-warning" value ="Register" className ="Test2" / >
-
-                 </div>
-             </>
-     
-         </>
-
-         )
+        )
     }
 
 export default LoginScreen;
