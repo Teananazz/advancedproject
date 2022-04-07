@@ -8,11 +8,11 @@ const Eyehook =
 
         const onChange = (e) => {
 
-            if (value == "password") {
-                setValue("text")
+            if (value == "FillEye") {
+                setValue("FillEyeInv")
             }
             else {
-                setValue("password")
+                setValue("FillEye")
             }
    
         }

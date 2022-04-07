@@ -12,7 +12,7 @@ import Eyehook from "../hooks/Eyehook"
      () => {
          const user = useInput("");
          const password = useInput("");
-         const Eye = Eyehook("password");
+         const Eye = Eyehook("FillEye");
      
 
      const onAttempt =
@@ -35,17 +35,24 @@ import Eyehook from "../hooks/Eyehook"
 
     
       
-        return (
-            <>
+         return (
+
+ <>
+
+
+                 <div class="row">
+                     <div class="col-sm-3" />
+          <div class="w-50 p-3" >
                 <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1"> {IconHandle("Username")}  </span>
+                    <span className="input-group-text" id="basic-addon1"> {IconHandle("FiUser")}  </span>
                     <input type="text" value={user.value} onChange={user.onChange} className="form-control" placeholder="Username" />
 
-                </div>
+              
 
+               </div>
 
                 <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {IconHandle("Password")}   </span>
+                    <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
                     <input type={Eye.value} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
                     <div className="input-group-btn">
                         <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="form-control"  > {IconHandle(Eye.value)} </button>
@@ -62,10 +69,13 @@ import Eyehook from "../hooks/Eyehook"
                         <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />
 
                     </div>
-                </>
+               </>
 
-            </>
-
+               
+          </div>
+       </div>
+   </>     
+           
         )
     }
 

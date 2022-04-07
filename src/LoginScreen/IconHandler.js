@@ -5,16 +5,16 @@ import { AiFillLock } from 'react-icons/ai';
 const IconHandle =
     (name) => {
 
-        if (name === "Username") {
+        if (name === "FiUser") {
             return (<FiUser />)
         }
-        if (name === "Password") {
+        if (name === "FillLock") {
             return (<AiFillLock />)
         }
-        if (name === "password") {
+        if (name === "FillEyeInv") {
             return (<AiFillEyeInvisible />)
         }
-        if (name === "text") {
+        if (name === "FillEye") {
             return (<AiFillEye />)
         }
 
