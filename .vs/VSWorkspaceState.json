@@ -4,8 +4,9 @@
     "\\src",
     "\\src\\ChatScreen",
     "\\src\\CommonComponents",
-    "\\src\\Hooks",
+    "\\src\\hooks",
     "\\src\\LoginScreen"
   ],
+  "SelectedNode": "\\src\\hooks\\UserInput.js",
   "PreviewInSolutionExplorer": false
 }
