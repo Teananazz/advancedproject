@@ -3,10 +3,10 @@ import UserAuth from './UserAuth';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react'
 import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
-
 import { Link } from "react-router-dom";
  const LoginScreen =
      () => {
@@ -53,7 +53,7 @@ import { Link } from "react-router-dom";
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
-                    <input type={Eye.m} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
+                    <input type={Eye.value} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
                     <div className="input-group-btn">
                         <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="form-control"  > {IconHandle(Eye.value)} </button>
 
@@ -62,12 +62,12 @@ import { Link } from "react-router-dom";
                 <>
 
 
-
-                    <div class="flexbuttons">
+                              
+                     <div class="flexbuttons">
                         <Button onClick={onAttempt} as="input" type="button" variant="btn btn-outline-warning" value="login" className="Test1" />
-                      <Link to = "/Register">
+                                 <Link to="/Register">
                         <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />
-                      </Link>
+                            </Link>
                     </div>
                </>
 
