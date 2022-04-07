@@ -8,7 +8,7 @@ Running Instruction:
 1 - Install React
 2. Install React-icons 
 3. Install React- bootstrap
-4. React- router
+4. React- router (npm install react-router-dom --save)
 
 
 ## Available Scripts
