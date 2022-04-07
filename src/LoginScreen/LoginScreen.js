@@ -8,11 +8,12 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react'
 import { AiFillEyeInvisible } from 'react-icons/ai'
 import { AiFillEye} from 'react-icons/ai'
-
+import useInput from "../hooks/UserInput";
  const LoginScreen =
- () => {
-        const [user, setUser] = useState('')
-        const [password, setPassword] = useState('')
+     () => {
+         const user = useInput("");
+         const password = useInput("");
+       
      const [passType, setType] = useState("password")
      const Icon_Handler =
          (name) => {
@@ -34,12 +35,12 @@ import { AiFillEye} from 'react-icons/ai'
 
      const onAttempt =
          () => {
-             if (user === '' || password === '') {
+             if (user.value === '' || password.value === '') {
                  alert(" One or more fields empty")
                  return;
              }
 
-             var check = UserAuth({ user }, { password })
+             var check = UserAuth(user, password)
              if (!check) {
 
                  alert("Incorrect user/password")
@@ -65,14 +66,14 @@ import { AiFillEye} from 'react-icons/ai'
       <>
          <div className="input-group mb-3">
           <span className="input-group-text" id="basic-addon1"> {Icon_Handler("Username")}  </span>      
-          <input type="text" value={user} onChange={(e) => { setUser(e.target.value) }} className ="form-control" placeholder="Username"  />
+                 <input type="text" value={user.value} onChange={user.onChange} className ="form-control" placeholder="Username"  />
                      
          </div>
 
 
           <div className="input-group mb-3">
            <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
-           <input type={passType} value={password} onChange={(e) => {setPassword(e.target.value)}} className = "form-control" placeholder ="Password"  / >      
+                 <input type={passType} value={password.value} onChange={password.onChange} className = "form-control" placeholder ="Password"  / >
            <div className="input-group-btn">
             <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  > {Icon_Handler(passType)} </button>
                          
