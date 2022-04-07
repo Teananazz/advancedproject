@@ -60,48 +60,24 @@ import { AiFillEye} from 'react-icons/ai'
              setType("password")
 
          }
-
+      
      return (
-              <>
-                <div className="input-group mb-3">
-                    <span className="input-group-text"
-                        id="basic-addon1">   {Icon_Handler("Username")}   </span>
-                    <input type="text"
-                        value={user}
-                        onChange={
-
-                            (e) => {
-
-                                setUser(e.target.value)
-                            }
-                        }
-                        className="form-control"
-                        placeholder="Username"
-                        aria-label="Username"
-                        aria-describedby="basic-addon1" />
-                </div>
+      <>
+         <div className="input-group mb-3">
+          <span className="input-group-text" id="basic-addon1"> {Icon_Handler("Username")}  </span>      
+          <input type="text" value={user} onChange={(e) => { setUser(e.target.value) }} className ="form-control" placeholder="Username"  />
+                     
+         </div>
 
 
-                <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
-                 <input type={passType}
-                        value={password}
-                        onChange=
-                        {(e) => {
-                            setPassword(e.target.value)
-                        }
-                        }
-                        className="form-control"
-                        placeholder="Password"
-                        aria-label="Password"
-                     aria-describedby="basic-addon1" />
-
-                 <div className="input-group-btn">
-                     <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  >
-                         {Icon_Handler( passType )}
-                     </button>
-                     </div>
-                </div>
+          <div className="input-group mb-3">
+           <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
+           <input type={passType} value={password} onChange={(e) => {setPassword(e.target.value)}} className = "form-control" placeholder ="Password"  / >      
+           <div className="input-group-btn">
+            <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  > {Icon_Handler(passType)} </button>
+                         
+           </div>
+          </div>
              <>
 
 
@@ -109,27 +85,15 @@ import { AiFillEye} from 'react-icons/ai'
                  <div class="flexbuttons">
 
 
-                     <Button
-                         onClick={onAttempt}
-                         as="input"
-                         type="button"
-                         variant="btn btn-outline-warning"
-                         value="login"
-                         className="Test1"
-                     />
 
-                     <Button
-                         as="input"
-                         type="button"
-                         variant="btn btn-outline-warning"
-                         value="Register"
-                         className="Test2"
-                     />{''}
+                     <Button onClick={onAttempt} as ="input" type = "button" variant ="btn btn-outline-warning" value="login" className ="Test1"/>
+
+
+
+
+                     <Button as ="input" type ="button" variant ="btn btn-outline-warning" value ="Register" className ="Test2" / >
+
                  </div>
-
-
-
-
              </>
      
          </>

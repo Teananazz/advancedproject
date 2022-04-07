@@ -3,8 +3,10 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\LoginScreen"
+    "\\src\\ChatScreen",
+    "\\src\\LoginScreen",
+    "\\src\\RegisterForm"
   ],
-  "SelectedNode": "\\src\\LoginScreen\\LoginScreen.js",
+  "SelectedNode": "\\src\\index.js",
   "PreviewInSolutionExplorer": false
 }

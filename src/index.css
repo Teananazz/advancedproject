@@ -13,8 +13,10 @@ code {
 }
 
 .form-control {
+    align-items: center;
     display: inline-block;
     background: #000;
+    
     color: #fff;
     border: none;
     padding: 10px 20px;
