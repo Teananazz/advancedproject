@@ -57,7 +57,7 @@ const RegisterScreen =
 
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
-                    <input type={passType.value}
+                    <input type={passType.m}
                         value={password.value}
                         onChange={password.onChange}
                         className="form-control"
@@ -74,8 +74,8 @@ const RegisterScreen =
 
 
                 <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {IconHandle("Password validation")}   </span>
-                    <input type={passTypeR.value}
+                    <span className="input-group-text" id="basic-addon1">   {IconHandle("ArrowRepeat")}   </span>
+                    <input type={passTypeR.m}
                         value={passwordvalid.value}
                         onChange={passwordvalid.onChange}
                         className="form-control"
