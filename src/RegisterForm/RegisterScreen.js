@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
+import RegisterAuth from './RegisterAuth';
 
 const RegisterScreen =
     () => {
@@ -28,9 +29,11 @@ const RegisterScreen =
                     return;
                 }
 
-                var check = UserAuth(password, passwordvalid)
-                if (!check) {
-                    // change the alert
+                var check = RegisterAuth(password, passwordvalid)
+                console.log(password)
+                console.log(passwordvalid)
+                console.log(check)
+                if (check === false) {
                     alert("Please fix your password and your password validation")
                     return;
                 }
