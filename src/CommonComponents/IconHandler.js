@@ -2,6 +2,7 @@ import { AiFillEyeInvisible } from 'react-icons/ai'
 import { AiFillEye } from 'react-icons/ai'
 import { FiUser } from 'react-icons/fi';
 import { AiFillLock } from 'react-icons/ai';
+import { TiArrowRepeat} from 'react-icons/ti'
 const IconHandle =
     (name) => {
 
@@ -16,6 +17,9 @@ const IconHandle =
         }
         if (name === "FillEye") {
             return (<AiFillEye />)
+        }
+        if (name == "ArrowRepeat") {
+            return (<TiArrowRepeat />)
         }
 
     }
