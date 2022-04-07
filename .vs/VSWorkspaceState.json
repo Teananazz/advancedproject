@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\ChatScreen",
-    "\\src\\CommonComponents",
-    "\\src\\hooks",
-    "\\src\\LoginScreen"
+    "\\public",
+    "\\src"
   ],
-  "SelectedNode": "\\src\\hooks\\UserInput.js",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

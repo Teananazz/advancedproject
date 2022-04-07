@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-const userInput = (defaultValue) => {
+const UserInput = (defaultValue) => {
     const [value, setValue] = useState(defaultValue);
 
     const onChange = (e) => setValue(e.target.value);
@@ -9,4 +9,4 @@ const userInput = (defaultValue) => {
     return { value, setValue, onChange };
 };
 
-export default userInput
+export default UserInput
