@@ -1,15 +1,12 @@
-import { FiUser } from 'react-icons/fi';
-import { AiFillLock } from 'react-icons/ai';
+
 import UserAuth from '../LoginScreen/UserAuth'
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react'
-import { AiFillEyeInvisible } from 'react-icons/ai'
-import { AiFillEye} from 'react-icons/ai'
+
 
 import useInput from "../hooks/UserInput";
-import IconHandle from "../LoginScreen/IconHandler"
+import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 
 const RegisterScreen =
@@ -17,39 +14,12 @@ const RegisterScreen =
         const user = useInput("")
         const password = useInput("")
         const passwordvalid = useInput("")
-        const passType = useInput("FillEye")
-        const passTypeR = useInput("FillEye")
+        const passType = Eyehook("FillEye")
+        const passTypeR = Eyehook("FillEye")
         const display = useInput("")
 
 
-        //const [user, setUser] = useState('')
-        //const [password, setPassword] = useState('')
-        //const [passwordvalid, setPasswordvalid] = useState('')
-        //const [passType, setType] = useState("password")
-        //const [display, setDisplay] = useState('')
-        const Icon_Handler =
-            (name) => {
-
-                if (name === "Username") {
-                    return (<FiUser />)
-                }
-                if (name === "Password") {
-                    return (<AiFillLock />)
-                }
-                if (name === "password") {
-                    return (<AiFillEyeInvisible />)
-                }
-                if (name === "Passwordvalid") {
-                    return (<AiFillLock />)
-                }
-                if (name === "text") {
-                    return (<AiFillEye />)
-                }
-                if (name === "Displayname") {
-                    return (<FiUser />)
-                }
-
-            }
+      
 
         const onAttempt =
             () => {
