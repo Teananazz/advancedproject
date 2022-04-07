@@ -20,8 +20,8 @@ const App =
     () => {
         return (
 
-            <LoginScreen />
-            //<RegisterScreen />
+         //   <LoginScreen />
+            <RegisterScreen />
 
         )
 
