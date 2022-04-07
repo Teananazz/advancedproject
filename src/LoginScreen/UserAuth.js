@@ -44,14 +44,14 @@ const myListP = Users.map(
 
 const UserAuth =
 
-    ({ user }, { password } , e) => {
+    (user, password) => {
         
       
-     var index1 =  myListU.indexOf( user );
-     var index2 =   myListP.indexOf( password );
+     var index1 =  myListU.indexOf( user.value );
+     var index2 =   myListP.indexOf( password.value );
         
      
-        return ( index1 == index2)
+        return ( index1 == index2 && index1!= -1)
 
     }
 

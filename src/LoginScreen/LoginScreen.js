@@ -1,45 +1,28 @@
-import { FiUser } from 'react-icons/fi';
-import { AiFillLock } from 'react-icons/ai';
-import UserAuth from './UserAuth';
 
+import UserAuth from './UserAuth';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react'
-import { AiFillEyeInvisible } from 'react-icons/ai'
-import { AiFillEye} from 'react-icons/ai'
+import useInput from "../hooks/UserInput";
+import IconHandle from "../LoginScreen/IconHandler"
+import Eyehook from "../hooks/Eyehook"
 
  const LoginScreen =
- () => {
-        const [user, setUser] = useState('')
-        const [password, setPassword] = useState('')
-     const [passType, setType] = useState("password")
-     const Icon_Handler =
-         (name) => {
-
-             if (name === "Username") {
-                 return (<FiUser />)
-             }
-             if (name === "Password") {
-                 return (<AiFillLock />)
-             }
-             if (name === "password") {
-                 return (<AiFillEyeInvisible/>)
-             }
-             if (name === "text") {
-                 return (<AiFillEye />)
-             }
-
-         }
+     () => {
+         const user = useInput("");
+         const password = useInput("");
+         const Eye = Eyehook("password");
+     
 
      const onAttempt =
          () => {
-             if (user === '' || password === '') {
+             if (user.value === '' || password.value === '') {
                  alert(" One or more fields empty")
                  return;
              }
 
-             var check = UserAuth({ user }, { password })
+             var check = UserAuth(user, password)
              if (!check) {
 
                  alert("Incorrect user/password")
@@ -50,91 +33,40 @@ import { AiFillEye} from 'react-icons/ai'
 
          }
 
-     const togglePassword =
-         () => {
-
-             if (passType === "password") {
-                 setType("text")
-                 return;
-             }
-             setType("password")
-
-         }
-
-     return (
-              <>
+    
+      
+        return (
+            <>
                 <div className="input-group mb-3">
-                    <span className="input-group-text"
-                        id="basic-addon1">   {Icon_Handler("Username")}   </span>
-                    <input type="text"
-                        value={user}
-                        onChange={
+                    <span className="input-group-text" id="basic-addon1"> {IconHandle("Username")}  </span>
+                    <input type="text" value={user.value} onChange={user.onChange} className="form-control" placeholder="Username" />
 
-                            (e) => {
-
-                                setUser(e.target.value)
-                            }
-                        }
-                        className="form-control"
-                        placeholder="Username"
-                        aria-label="Username"
-                        aria-describedby="basic-addon1" />
                 </div>
 
 
                 <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {Icon_Handler("Password")}   </span>
-                 <input type={passType}
-                        value={password}
-                        onChange=
-                        {(e) => {
-                            setPassword(e.target.value)
-                        }
-                        }
-                        className="form-control"
-                        placeholder="Password"
-                        aria-label="Password"
-                     aria-describedby="basic-addon1" />
+                    <span className="input-group-text" id="basic-addon1">   {IconHandle("Password")}   </span>
+                    <input type={Eye.value} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
+                    <div className="input-group-btn">
+                        <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="form-control"  > {IconHandle(Eye.value)} </button>
 
-                 <div className="input-group-btn">
-                     <button variant="btn btn-outline-primary" onClick={togglePassword} className="form-control"  >
-                         {Icon_Handler( passType )}
-                     </button>
-                     </div>
+                    </div>
                 </div>
-             <>
+                <>
 
 
 
-                 <div class="flexbuttons">
+                    <div class="flexbuttons">
+                        <Button onClick={onAttempt} as="input" type="button" variant="btn btn-outline-warning" value="login" className="Test1" />
 
+                        <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />
 
-                     <Button
-                         onClick={onAttempt}
-                         as="input"
-                         type="button"
-                         variant="btn btn-outline-warning"
-                         value="login"
-                         className="Test1"
-                     />
+                    </div>
+                </>
 
-                     <Button
-                         as="input"
-                         type="button"
-                         variant="btn btn-outline-warning"
-                         value="Register"
-                         className="Test2"
-                     />{''}
-                 </div>
+            </>
 
-
-
-
-             </>
-     
-         </>
-
-         )
+        )
     }
 
 export default LoginScreen;
