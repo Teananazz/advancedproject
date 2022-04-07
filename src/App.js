@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 import LoginScreen from './LoginScreen/LoginScreen';
+import RegisterScreen from './RegisterForm/RegisterScreen';
 
 
 // after joke 2
@@ -18,18 +19,12 @@ import { useState } from 'react'
 const App =
     () => {
         return (
-           
-       <LoginScreen/ >
 
+            <LoginScreen />
+            //<RegisterScreen />
 
+        )
 
-
-           )
-           
-       
     }
-
-
-
 
 export default App;
