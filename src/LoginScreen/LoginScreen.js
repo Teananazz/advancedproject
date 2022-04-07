@@ -7,7 +7,7 @@ import { useState } from 'react'
 import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
-
+import { Link } from "react-router-dom";
  const LoginScreen =
      () => {
          const user = useInput("");
@@ -62,12 +62,12 @@ import Eyehook from "../hooks/Eyehook"
                 <>
 
 
-
-                    <div class="flexbuttons">
+                              
+                     <div class="flexbuttons">
                         <Button onClick={onAttempt} as="input" type="button" variant="btn btn-outline-warning" value="login" className="Test1" />
-
+                                 <Link to="/Register">
                         <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />
-
+                            </Link>
                     </div>
                </>
 
