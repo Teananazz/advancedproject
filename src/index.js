@@ -1,13 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import LoginScreen from './LoginScreen/LoginScreen';
+import RegisterScreen from './RegisterForm/RegisterScreen';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
 
 
-const Root_Element = document.getElementById("root");
 
-const root = ReactDOM.createRoot(Root_Element);
-const Rendered_elements = <App />
 
-root.render(Rendered_elements);
+
+
+
+
+const rootElement = document.getElementById("root");
+
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
+
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<LoginScreen />} />
+            <Route path="Register" element={<RegisterScreen />} />
+           
+        </Routes>
+    </BrowserRouter>
+    
+
+)
