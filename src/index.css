@@ -13,7 +13,7 @@ code {
 }
 
 .form-control {
-    align-items: center;
+    
     display: inline-block;
     background: #000;
     
@@ -51,6 +51,7 @@ code {
     touch-action: manipulation;
     white-space: nowrap;
     cursor: pointer;
+   
 }
 
 .Test2 {
@@ -84,3 +85,99 @@ code {
     display: flex;
     justify-content: space-between;
 }
+
+.flexes {
+    display: flex;
+    justify-content:center;
+    
+}
+
+textarea[type=text] {
+    padding: 9px 12px 11px;
+    margin: 5px 10px;
+    border-radius: 20px !important;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #222222;
+    color: #11998e;
+    min-height: 20px;
+    max-height: 100px;
+    overflow: hidden auto;
+    overflow-wrap: break-word;
+    position: relative;
+    z-index: 100;
+    word-break: inherit;
+    white-space: pre-wrap;
+    line-height: 20px;
+    text-rendering: optimizeLegibility;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0px;
+    width: 30%;
+   
+    
+}
+
+
+
+
+.background {
+    align-items: flex-end;
+  
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    font-family: inherit;
+    margin: 0px;
+    max-width: 100%;
+    background-color: rgb(32, 44, 51);
+    min-height: 62px;
+    visibility : visible;
+    padding-bottom : 5px;
+    padding-top : 5px;
+    padding-right : 10px;
+    padding-left : 17px;
+    position:relative;
+    vertical-align: baseline;
+     border-radius: 20px !important
+
+    
+}
+
+#button-addon2 {
+    padding-left: 20px;
+
+}
+
+
+#button-72 {
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+    border-radius: 42px;
+    border-width: 0;
+    box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    font-family: Quicksand,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    padding: 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+}
+
+
+
