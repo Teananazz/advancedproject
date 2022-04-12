@@ -1,14 +1,28 @@
 ﻿
-import GroupDescription from './GroupDescription'
+import TextBox from './TextBox'
+import Messages from './Messages';
 
 const MessageScreen =
     () => {
-
-
+       
         return (
-            <GroupDescription />
-            
+             
+            <>
 
+                <div class="background2" >
+                    
+                    <TextBox />
+                    
+                    
+
+
+
+
+
+
+
+                </div>
+             </>   
             )
 
 

@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\CommonComponents",
+    "\\src\\hooks",
+    "\\src\\LoginScreen",
+    "\\src\\MessageScreen"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\hooks\\Texthook.js",
   "PreviewInSolutionExplorer": false
 }
