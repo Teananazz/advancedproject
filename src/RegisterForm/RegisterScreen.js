@@ -41,7 +41,10 @@ const RegisterScreen =
 
             }
 
-
+        const Check
+            = () => {
+                console.log("Yes")
+            }
         return (
             <>
                 <div className="input-group mb-3">
@@ -105,22 +108,21 @@ const RegisterScreen =
                 </div>
                 <>
 
+                    <div class="input-group">
+                        <input onChange={photo.onChange} type="file" class="form-control"  aria-label="Upload"/>
+        
+                        <img src={photo.file} width="200" height="200"  />
+                        
+                    </div>
 
-
+                   
+                   
                     <div class="flexbuttons">
-                        <Link to="/">
+                       
                             <Button as="input" type="button" variant="btn btn-outline-warning" value="Back" className="Test2" />
-                        </Link>
+                       
 
-
-                        <Button
-                            onClick={photo.Imagehook}
-                            as="input"
-                            type="button"
-                            variant="btn btn-outline-warning"
-                            value="Add photo"
-                            className="Test2"
-                        />{''}
+                     
 
                         <Button
                             onClick={onAttempt}
