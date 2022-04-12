@@ -8,6 +8,6 @@
     "\\src\\LoginScreen",
     "\\src\\MessageScreen"
   ],
-  "SelectedNode": "\\src\\hooks\\Texthook.js",
+  "SelectedNode": "\\src\\MessageScreen\\TextBox.js",
   "PreviewInSolutionExplorer": false
 }
