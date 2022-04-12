@@ -5,7 +5,6 @@ const RegisterAuth =
     (password, passwordvalid) => {
         // check if password is different from passwordvalid
         if (!(password.value === passwordvalid.value)) {
-            
             return false;
         }
         // if the password is all numbers

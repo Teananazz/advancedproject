@@ -1,14 +1,14 @@
-
-import UserAuth from '../LoginScreen/UserAuth'
 import React from 'react'
+import useState from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
-
 
 import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 import RegisterAuth from './RegisterAuth';
+import Imagehook from '../hooks/Imagehook';
+import { Link } from 'react-router-dom';
 
 const RegisterScreen =
     () => {
@@ -18,9 +18,8 @@ const RegisterScreen =
         const passType = Eyehook("FillEye")
         const passTypeR = Eyehook("FillEye")
         const display = useInput("")
+        const photo = Imagehook("")
 
-
-      
 
         const onAttempt =
             () => {
@@ -42,7 +41,6 @@ const RegisterScreen =
 
             }
 
-       
 
         return (
             <>
@@ -54,7 +52,7 @@ const RegisterScreen =
                         onChange={user.onChange}
                         className="form-control"
                         placeholder="Username"
-                         />
+                    />
                 </div>
 
 
@@ -65,7 +63,7 @@ const RegisterScreen =
                         onChange={password.onChange}
                         className="form-control"
                         placeholder="Password"
-                        />
+                    />
 
                     <div className="input-group-btn">
                         <button variant="btn btn-outline-primary" onClick={passType.onChange} className="form-control"  >
@@ -83,7 +81,7 @@ const RegisterScreen =
                         onChange={passwordvalid.onChange}
                         className="form-control"
                         placeholder="Password validation"
-                       />
+                    />
 
                     <div className="input-group-btn">
                         <button variant="btn btn-outline-primary" onClick={passTypeR.onChange} className="form-control"  >
@@ -100,19 +98,32 @@ const RegisterScreen =
                     <input type="text"
                         value={display.value}
                         onChange={display.onChange}
-                        
+
                         className="form-control"
                         placeholder="Displayname"
-                         />
+                    />
                 </div>
                 <>
 
 
 
                     <div class="flexbuttons">
+                        <Link to="/">
+                            <Button as="input" type="button" variant="btn btn-outline-warning" value="Back" className="Test2" />
+                        </Link>
+
 
                         <Button
-                        onClick={onAttempt}
+                            onClick={photo.Imagehook}
+                            as="input"
+                            type="button"
+                            variant="btn btn-outline-warning"
+                            value="Add photo"
+                            className="Test2"
+                        />{''}
+
+                        <Button
+                            onClick={onAttempt}
                             as="input"
                             type="button"
                             variant="btn btn-outline-warning"
@@ -120,10 +131,6 @@ const RegisterScreen =
                             className="Test2"
                         />{''}
                     </div>
-
-
-
-
                 </>
 
             </>
