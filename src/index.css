@@ -211,56 +211,53 @@ textarea[type=text] {
     font-style: inherit;
     font-variant: inherit;
     font-weight: inherit;
+    flex-basis : auto;
+    display: flex;
+    align-items : flex-start;
+    flex: auto;
+    flex-direction:column;
+    align-content: flex-start;
+    align-self: flex-start;
+    justify-content: flex-end;
     line-height: inherit;
     margin: 0px;
     margin-left: 10px;
-    margin-top: 30px;
+    margin-top: 5px;
     margin-bottom: 30px;
+    border-radius: 42px;
+    box-sizing: border-box;
     user-select: text;
     vertical-align: initial;
     overflow-wrap: break-word;
     position: relative;
     white-space: pre-line;
     border-radius: 20px !important;
-    
 }
-    .HostMessages::after {
-        content: "\a";
-        white-space: pre;
-    }
+
 
 
 .Messages {
-   
-    align-items: flex-end;
-    align-content: flex-end;
-    align-self: flex-end;
-    flex-direction: row;
-    justify-content: flex-start;
+    margin: 0px 0px 200px 0px;
+
     background-color: midnightblue;
     border-radius: 42px;
     border-width: 0;
     color: #FFFFFF;
     cursor: auto;
-    display: flex;
-    margin: 0px 0px 200px 0px;
-  
+   
     width: 50%;
-    
-    text-align: center;
     text-decoration: none;
     text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-   
-    height: 50%;
+    overflow: scroll;
     margin-left: 20%;
     overflow: scroll;
     position: absolute;
     vertical-align: initial;
-    box-sizing: border-box;
-    padding-top: 40%;
+    height: 60% !important;
+    flex-wrap: wrap;
 }
 
 
@@ -276,4 +273,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.Down {
+    margin-top: 40%;
 }

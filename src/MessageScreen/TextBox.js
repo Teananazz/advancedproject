@@ -18,10 +18,11 @@ const TextBox =
             
             <>
                 
-
-                <div class= "Messages">
-                    <li> {Log} </li>  
-                  
+              
+                <div class="Messages">
+                    <div class="Down">
+                    <ul class="list-group"> {Log} </ul>
+                    </div>
                 </div>
                 
                 <div class="background">
