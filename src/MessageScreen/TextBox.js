@@ -5,7 +5,7 @@ import IconHandle from "../CommonComponents/IconHandler"
 import Texthook from "../hooks/Texthook";
 import Messages from './Messages';
 const TextBox =
-    () => {
+    (user) => {
         const Input = Texthook("");
       
             

@@ -9,7 +9,7 @@ const Texthook = (defaultValue) => {
     const [List, UpdateList] = useState([]);
 
     const onChange = (e) => setValue(e.target.value);
-    var val;
+   
     const UpdateMessages =
         (e) => {
             if (value === "") {

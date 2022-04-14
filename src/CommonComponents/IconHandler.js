@@ -5,7 +5,8 @@ import { AiFillLock } from 'react-icons/ai';
 import { TiArrowRepeat } from 'react-icons/ti';
 import { HiPaperAirplane } from 'react-icons/hi';
 import { Gi3DGlasses } from 'react-icons/gi'
-import { MdAttachFile} from 'react-icons/md'
+import { MdAttachFile } from 'react-icons/md'
+import {FiUserPlus} from 'react-icons/fi'
 const IconHandle =
     (name) => {
         switch (name) {
@@ -26,6 +27,8 @@ const IconHandle =
                 return (<Gi3DGlasses />)
             case ("AttachFile"):
                 return (<MdAttachFile />);
+            case ("FiUserPlus"):
+                return (<FiUserPlus />);
 
         }
      
