@@ -151,23 +151,26 @@ textarea[type=text] {
     align-content: flex-start;
     align-self: flex-start;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     font-family: inherit;
-    margin: 0px;
-    max-width: 50%;
+    
+    left: 100%;
+    top: 65%;
+    
     background-color: rgb(32, 44, 51);
    
-    max-height: 100%;
+    max-height: 50%;
     visibility: visible;
   
     position: absolute;
     vertical-align: baseline;
     border-radius: 20px !important;
-    margin-top: 30%;
+    margin-top: 30% !important;
     margin-left: 20%;
     margin-right: 30%;
-    width: 100%;
-    bottom: 19%;
+    width: 150%;
+    
+    
     padding: 6px 9px 8px 7px;
 }
 
@@ -259,10 +262,10 @@ textarea[type=text] {
 
 .Messages {
     margin: auto;
-    margin-left: 20%;
-    margin-bottom: 40%;
+    margin-left: 120%;
+    margin-bottom: 112%;
     display: flex;
-    background-color: #0B0A09;
+    background-color: rgb(32, 44, 51);
     border-radius: 42px;
     border-width: 0;
     color: #FFFFFF;
@@ -272,8 +275,8 @@ textarea[type=text] {
     flex: 1 1 auto;
     align-content: flex-start;
     align-items: flex-start;
-    width: 50%;
-    height: 60%;
+    width: 200%;
+    height: 82.5%;
     bottom: -50%;
     text-decoration: none;
     text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;

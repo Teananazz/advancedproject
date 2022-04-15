@@ -5,11 +5,15 @@ import IconHandle from "../CommonComponents/IconHandler"
 import Texthook from "../hooks/Texthook";
 import Messages from './Messages';
 const TextBox =
-    (user) => {
-        const Input = Texthook("");
+    ({ phone }) => {
+
+        const Input = Texthook("", phone);
+
       
-            
-        var Log = Input.List.map((value) =>  <div  class="HostMessages">  {value}   </div>);
+
+       
+        var i = 0;
+        var Log = Input.List.get(phone)?.map(({ value }) => <div key={i++} class="HostMessages">  {value}   </div>);
         
        
         
@@ -20,7 +24,7 @@ const TextBox =
                 
                 <div class="Messages ">
                     <div class="Down">
-                        <ul class="list-group"> {Log} </ul>
+                        <ul  class="list-group"> {Log} </ul>
                     </div>
                 </div>
                
@@ -35,7 +39,7 @@ const TextBox =
                             <button onClick={Input.UpdateMessages} class="btn btn-outline-secondary" type="button" id= "button-72">{IconHandle("Airplane")}</button>
                             
                      </div>
-                        <textarea value={Input.value} onChange={Input.onChange} name="check" autocorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+                        <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
                         <div class="input-group-prepend">
                              
                                 <button class="btn btn-outline-secondary" type="button" id="button-72"> {IconHandle("AttachFile")}</button>

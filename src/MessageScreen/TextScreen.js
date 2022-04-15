@@ -17,17 +17,19 @@ const TextScreen =
 
                 }
 
-                return <TextBox user={Activated_Group} />
+                return <TextBox phone={Activated_Group} />
 
             }
 
         const Listing = List.map((value) =>  value.phone );
 
         const Activate =
-            (value) => {
-
-                var index = Listing.indexOf(value);
-                setActivated({ value });
+            ( value ) => {
+                console.log(value)
+                var index = Listing.indexOf( value );
+                
+                setActivated(value);
+                console.log(Activated_Group)
                 GiveScreen();
             }
         

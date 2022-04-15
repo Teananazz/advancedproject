@@ -6,8 +6,9 @@
     "\\src\\CommonComponents",
     "\\src\\hooks",
     "\\src\\LoginScreen",
-    "\\src\\MessageScreen"
+    "\\src\\MessageScreen",
+    "\\src\\RegisterForm"
   ],
-  "SelectedNode": "\\src\\MessageScreen\\Group,js",
+  "SelectedNode": "\\src\\MessageScreen\\GroupListing.js",
   "PreviewInSolutionExplorer": false
 }

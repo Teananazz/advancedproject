@@ -8,10 +8,7 @@ import TextScreen from './TextScreen'
 const GroupListing =
     ({ List }) => {
 
-        const check =
-            () => {
-                console.log("YES")
-            }
+       
 
         const Screen = TextScreen({ List });
         var result = Screen.GiveScreen();
@@ -23,9 +20,9 @@ const GroupListing =
 
 
             }
-
+       
         var Mapping = List.map((value) =>
-
+             
             <Button id="flex" key={value.phone} onClick={ () => Func(value.phone)} variant = "primary" size ="lg" >
             
                  {value.id} <br /> {value.phone}  

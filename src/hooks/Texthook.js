@@ -4,12 +4,16 @@
 
 import { useState } from "react";
 import Messages from '../MessageScreen/Messages';
-const Texthook = (defaultValue) => {
+const Texthook = (defaultValue, phone) => {
     const [value, setValue] = useState(defaultValue);
-    const [List, UpdateList] = useState([]);
+    const [List, UpdateList] = useState(new Map());
+    const [ListUser, UpdateListUser] = useState( phone )
 
     const onChange = (e) => setValue(e.target.value);
-   
+
+
+
+
     const UpdateMessages =
         (e) => {
             if (value === "") {
@@ -17,14 +21,30 @@ const Texthook = (defaultValue) => {
                 return;
             }
 
-            UpdateList(List.concat(value));
+           
+            if (List.has(phone ) === false) {
+                UpdateListUser( phone )
+                List.set(phone, [])
+                
+                List.get(phone).push({value})
+                setValue("")
+               
+                return;
+
+            }
+
+            UpdateListUser({ phone })
+
+         
+          
+            List.get(phone).push({value})
             setValue("")
            
             
 
         }
 
-    return { value, setValue, onChange, UpdateMessages, List, UpdateList };
+    return { value, setValue, onChange, UpdateMessages,  List , UpdateList, ListUser, UpdateListUser };
 };
 
 export default Texthook
