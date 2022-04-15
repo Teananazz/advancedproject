@@ -2,19 +2,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 import IconHandle from "../CommonComponents/IconHandler"
-import Texthook from "../hooks/Texthook";
-import Messages from './Messages';
+
 const TextBox =
-    ({ phone }) => {
-
-        const Input = Texthook("", phone);
-
-      
-
-       
-        var i = 0;
-        var Log = Input.List.get(phone)?.map(({ value }) => <div key={i++} class="HostMessages">  {value}   </div>);
+    ({ Input ,  phone } ) => {
         
+       
+        var Logs = Input.GiveLogs({ phone })
+        
+        var i = 0;
+        var Log = Logs?.map(({ value }) => <div key={i++} class="HostMessages">  {value}   </div>);
+       
        
         
         return (
@@ -36,7 +33,7 @@ const TextBox =
                 <div class="input-group">
                     <div class="input-group-prepend">
                             
-                            <button onClick={Input.UpdateMessages} class="btn btn-outline-secondary" type="button" id= "button-72">{IconHandle("Airplane")}</button>
+                            <button onClick={() => { Input.UpdateLocalLogs({ phone }) }} class="btn btn-outline-secondary" type="button" id= "button-72">{IconHandle("Airplane")}</button>
                             
                      </div>
                         <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />

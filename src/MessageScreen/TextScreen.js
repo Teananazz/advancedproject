@@ -3,12 +3,14 @@
 import TextBox from './TextBox'
 import {useState} from 'react'
 import HoldScreen from './HoldScreen'
+import Texthook from '../hooks/Texthook'
 const TextScreen =
 
-    ({ List }) => {
+    ({ Input } ) => {
+         
         {/* probably needs to activate the side bar that indicates the person above the chat here. */}
         const [Activated_Group, setActivated] = useState("-1");
-
+        
         const GiveScreen =
             () => {
 
@@ -16,21 +18,23 @@ const TextScreen =
                     return <HoldScreen/> 
 
                 }
-
-                return <TextBox phone={Activated_Group} />
+               
+                return <TextBox phone={Activated_Group} Input={Input} />
 
             }
 
-        const Listing = List.map((value) =>  value.phone );
+       
 
         const Activate =
-            ( value ) => {
-                console.log(value)
-                var index = Listing.indexOf( value );
+            (value) => {
                 
+                if (Activated_Group ==  value ) {
+                    console.log("le");
+                }
+
+
                 setActivated(value);
-                console.log(Activated_Group)
-                GiveScreen();
+              
             }
         
 
@@ -38,7 +42,7 @@ const TextScreen =
 
 
 
-        return ({Activate, GiveScreen,Activated_Group, setActivated})
+        return ({ Activate, GiveScreen, Activated_Group, setActivated })
 
 
 

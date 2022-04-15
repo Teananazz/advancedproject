@@ -4,29 +4,41 @@
 
 import { useState } from "react";
 import Messages from '../MessageScreen/Messages';
-const Texthook = (defaultValue, phone) => {
+const Texthook = (defaultValue) => {
+    {/* value is the current input that might go into the logs. */}
     const [value, setValue] = useState(defaultValue);
-    const [List, UpdateList] = useState(new Map());
-    const [ListUser, UpdateListUser] = useState( phone )
+    const [Logs, UpdateLogs] = useState(new Map());
+    const [ListUser, UpdateListUser] = useState( "-1" )
 
     const onChange = (e) => setValue(e.target.value);
 
 
 
+    const GiveLogs =
+        ({ phone }) => {
 
-    const UpdateMessages =
-        (e) => {
+            return Logs.get(phone);
+           
+
+        }
+
+
+    const UpdateLocalLogs =
+        ({ phone }) => {
             if (value === "") {
                 alert("empty message"); // need to change it.
                 return;
             }
+          
 
            
-            if (List.has(phone ) === false) {
-                UpdateListUser( phone )
-                List.set(phone, [])
+            if (Logs.has(phone) === false) {
                 
-                List.get(phone).push({value})
+
+                UpdateListUser( phone )
+                Logs.set(phone, [])
+                
+                Logs.get(phone).push({value})
                 setValue("")
                
                 return;
@@ -37,14 +49,14 @@ const Texthook = (defaultValue, phone) => {
 
          
           
-            List.get(phone).push({value})
+            Logs.get(phone).push({value})
             setValue("")
            
             
 
         }
 
-    return { value, setValue, onChange, UpdateMessages,  List , UpdateList, ListUser, UpdateListUser };
+    return { value, setValue, onChange, UpdateLogs, Logs, ListUser, UpdateListUser, GiveLogs, UpdateLocalLogs  };
 };
 
 export default Texthook
