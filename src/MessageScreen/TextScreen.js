@@ -28,9 +28,7 @@ const TextScreen =
         const Activate =
             (value) => {
                 
-                if (Activated_Group ==  value ) {
-                    console.log("le");
-                }
+               
 
 
                 setActivated(value);

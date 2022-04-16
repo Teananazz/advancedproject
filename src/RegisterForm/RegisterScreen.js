@@ -60,7 +60,7 @@ const RegisterScreen =
 
 
                 <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
+                    <span className="input-group-text " id="basic-addon1">   {IconHandle("FillLock")}   </span>
                     <input type={passType.m}
                         value={password.value}
                         onChange={password.onChange}
@@ -69,7 +69,7 @@ const RegisterScreen =
                     />
 
                     <div className="input-group-btn">
-                        <button variant="btn btn-outline-primary" onClick={passType.onChange} className="form-control"  >
+                        <button variant="btn btn-outline-primary" onClick={passType.onChange} className="eyebutton-login"  >
                             {IconHandle(passType.value)}
                         </button>
                     </div>
@@ -87,7 +87,7 @@ const RegisterScreen =
                     />
 
                     <div className="input-group-btn">
-                        <button variant="btn btn-outline-primary" onClick={passTypeR.onChange} className="form-control"  >
+                        <button variant="btn btn-outline-primary" onClick={passTypeR.onChange} className="eyebutton-login"  >
                             {IconHandle(passTypeR.value)}
                         </button>
                     </div>

@@ -25,10 +25,12 @@ root.render(
 
     <BrowserRouter>
         <Routes>
-            {/*<Route path="/" element={<MessageScreen />} />*/}
+          
+            {/*  {<Route path="/" element={  <LoginScreen /> } />}*/}
             {<Route path="/" element={<MessageScreen />} />}
-          {/*  {<Route path="Register" element={<RegisterScreen />} />}*/}
-          {/*  {<Route path="Image" element={<Imagehook />} />}*/}
+            
+         {/*   {<Route path="Register" element={<RegisterScreen />} />}*/}
+          
           {/*  {<Route path="Login" element={<LoginScreen />} />}  */}         
         </Routes>
     </BrowserRouter>

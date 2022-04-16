@@ -6,7 +6,8 @@ import { TiArrowRepeat } from 'react-icons/ti';
 import { HiPaperAirplane } from 'react-icons/hi';
 import { Gi3DGlasses } from 'react-icons/gi'
 import { MdAttachFile } from 'react-icons/md'
-import {FiUserPlus} from 'react-icons/fi'
+import { FiUserPlus } from 'react-icons/fi'
+import { FcPicture} from 'react-icons/fc'
 const IconHandle =
     (name) => {
         switch (name) {
@@ -29,6 +30,8 @@ const IconHandle =
                 return (<MdAttachFile />);
             case ("FiUserPlus"):
                 return (<FiUserPlus />);
+            case ("Picture"):
+                return (<FcPicture />);
 
         }
      
