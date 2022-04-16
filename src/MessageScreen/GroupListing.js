@@ -2,11 +2,10 @@
 
 
 import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import TextBox from './TextBox';
+
 import TextScreen from './TextScreen'
 import Texthook from '../hooks/Texthook'
-import {useRef} from 'react'
+
 
 
 const GroupListing =
@@ -27,7 +26,7 @@ const GroupListing =
                  Screen.Activate( phone )
                
                 result = Screen.GiveScreen();
-               
+                
 
             }
 
@@ -35,16 +34,17 @@ const GroupListing =
         
 
         var Mapping = List.map((value) =>
-             
-            <Button id="flex" key={value.phone} onClick={ () => Func(value.phone)} variant = "primary" size ="lg" >
+            <div class ="flex-down"> 
+            <Button id="flex"  key={value.phone} onClick={() => Func(value.phone)} variant= "outline-secondary" size ="lg" >
             
-                 {value.id} <br /> {value.phone}  
+                <div class="textalign ">   {value.id} <br /> {value.phone}    </div>
                 </Button>
+                </div>
                 )
        
         return (
             <>
-            <div className="d-grid gap-2" id="flex2"  >
+            <div class="d-grid gap-2" id="flex2"   >
                
                 {Mapping}
                     

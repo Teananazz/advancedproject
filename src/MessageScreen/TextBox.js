@@ -1,6 +1,6 @@
-﻿import { AiFillLock } from 'react-icons/ai';
+﻿
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button'
+
 import IconHandle from "../CommonComponents/IconHandler"
 
 const TextBox =

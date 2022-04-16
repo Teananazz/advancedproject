@@ -1,7 +1,6 @@
 
 import React from 'react'
-import { FiUser } from 'react-icons/fi';
-import { AiFillLock } from 'react-icons/ai';
+
 import onAttempt from './../App.js'
 import Icon_Handler from './../App.js';
 

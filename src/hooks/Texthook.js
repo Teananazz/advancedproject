@@ -3,7 +3,7 @@
 
 
 import { useState } from "react";
-import Messages from '../MessageScreen/Messages';
+
 const Texthook = (defaultValue) => {
     {/* value is the current input that might go into the logs. */}
     const [value, setValue] = useState(defaultValue);

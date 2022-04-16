@@ -3,7 +3,7 @@
 import TextBox from './TextBox'
 import {useState} from 'react'
 import HoldScreen from './HoldScreen'
-import Texthook from '../hooks/Texthook'
+
 const TextScreen =
 
     ({ Input } ) => {
