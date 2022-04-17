@@ -119,8 +119,9 @@ const RegisterScreen =
                    
                     <div class="flexbuttons">
                        
-                            <Button as="input" type="button" variant="btn btn-outline-warning" value="Back" className="Test2" />
-                       
+                    <Link to="/Login">
+                    <Button as="input" type="button" variant="btn btn-outline-warning" value="Back" className="Test2" />
+                </Link>                       
 
                      
 
