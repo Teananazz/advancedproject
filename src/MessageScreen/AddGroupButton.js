@@ -11,11 +11,9 @@ const AddGroupButton =
        /* const [List, UpdateList ] = useState(UserContacts())*/
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
-        //const addUser = AddUserButton(default);
 
         var List = Input.ContactList;
 
-       
         {/*  added value so that we can use e.target.value to know which user was focused
          *  OnClick we can't know the target value (i think) so i have to use focus.*/}
         var Lisiting = List.map((value) =>
@@ -49,9 +47,9 @@ const AddGroupButton =
                             Close
                         </Button>
                         
-                        {/*<Button variant="info" onClick={addUser.AddUserButton()}>
+                        <Button variant="info" onClick={() => AddUserButton()}>
                             Add user
-        </Button>*/} 
+                        </Button>
                         
                         <Button variant="primary" onClick={handleClose}>
                             Save Changes
