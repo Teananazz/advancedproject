@@ -8,6 +8,9 @@ import { Gi3DGlasses } from 'react-icons/gi'
 import { MdAttachFile } from 'react-icons/md'
 import { FiUserPlus } from 'react-icons/fi'
 import { FcPicture} from 'react-icons/fc'
+import { FcCamcorderPro } from 'react-icons/fc'
+import { FcSpeaker } from 'react-icons/fc'
+
 const IconHandle =
     (name) => {
         switch (name) {
@@ -32,7 +35,10 @@ const IconHandle =
                 return (<FiUserPlus />);
             case ("Picture"):
                 return (<FcPicture />);
-
+            case ("Video"):
+                return(<FcCamcorderPro />);
+            case ("Voice"):
+                return(<FcSpeaker />);
         }
      
     }
