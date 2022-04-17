@@ -9,31 +9,31 @@ const Groups =
         return (
             <>
 
-               
-
-             <GroupBar Input={Input} />
 
 
-            <div class="Groups">
+                <GroupBar Input={Input} />
 
 
-           <GroupListing List= {Input.List}/>
+                <div class="Groups">
+
+
+                    <GroupListing List={Input.List} />
 
                 </div>
 
-             
 
 
-            </> 
 
-            
-
-            
-            )
-     
+            </>
 
 
-       // need to return a small screen with around four buttons including adding a group.
+
+
+        )
+
+
+
+        // need to return a small screen with around four buttons including adding a group.
 
 
 

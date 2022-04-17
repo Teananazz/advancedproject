@@ -1,8 +1,4 @@
 
-
-
-
-
 const HoldScreen =
     () => {
 
@@ -10,15 +6,8 @@ const HoldScreen =
             
             <div class = "HoldScreen" / >
                
-            
-            
-            
+         
             )
-
-
-
-
-
 
     }
 

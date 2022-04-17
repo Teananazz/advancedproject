@@ -29,51 +29,29 @@ const TextBox =
                 
                 <div class="background">
 
-                   
-                        
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                            
-                            <button onClick={() => { Input.UpdateLocalLogs({ phone }) }} class="btn btn-outline-secondary" type="button" id= "button-72">{IconHandle("Airplane")}</button>
-                            
-                     </div>
-                        <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+                    <div class="input-group">
                         <div class="input-group-prepend">
-                            
-                           {/* <button class="btn btn-outline-secondary" type="button" id="button-72"> {IconHandle("AttachFile")}</button>*/}
-                            <AttachButton/>
-
-                                <button class="btn btn-outline-secondary" type="button" id= "button-72">{IconHandle("3DGlasses")}</button>
-                                
+                            <button onClick={() => { Input.UpdateLocalLogs({ phone }) }} class="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
                         </div>
-                            </div>
-                            
-                     
+
+                        <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+
+                        <div class="input-group-prepend">
+
+                            {/* <button class="btn btn-outline-secondary" type="button" id="button-72"> {IconHandle("AttachFile")}</button>*/}
+                            <AttachButton />
+
+                            <button class="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("3DGlasses")}</button>
+
+                        </div>
+                    </div>
+
+
                 </div>
-             
-
-                     
-
-                   
-                
-
-               
-
-             
-
-
-                
-
-                
+                 
                     
            </>
           )
-
-
-
-
-
-
 
 
     }

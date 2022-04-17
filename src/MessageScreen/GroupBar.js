@@ -6,7 +6,7 @@ const AddGroupBar =
 
 
         return (
-            
+
             <div class="AddGroupBar" >
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -15,26 +15,15 @@ const AddGroupBar =
 
                     <div class="input-group-prepend">
                         <button class="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
-                        <AddGroupButton Input={Input}/>
-                        
+                        <AddGroupButton Input={Input} />
+
                     </div>
-                   
 
-                   
-                
-                
-               
-
-
+                </div>
 
 
             </div>
-
-
-            </div>
-            )
-
-
+        )
 
 
     }
