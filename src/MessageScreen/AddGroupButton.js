@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import {useState} from 'react'
 import IconHandle from "../CommonComponents/IconHandler"
 import UserContacts from "../CommonComponents/UserContacts"
+import AddUserButton from './AddUserButton'
 
 const AddGroupButton =
     ({Input}) => {
@@ -10,6 +11,7 @@ const AddGroupButton =
        /* const [List, UpdateList ] = useState(UserContacts())*/
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+        const addUser = AddUserButton(default);
 
         var List = Input.ContactList;
 
@@ -46,6 +48,11 @@ const AddGroupButton =
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
+                        
+                        {/*<Button variant="info" onClick={addUser.AddUserButton()}>
+                            Add user
+        </Button>*/} 
+                        
                         <Button variant="primary" onClick={handleClose}>
                             Save Changes
                         </Button>
