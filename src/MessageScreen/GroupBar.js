@@ -18,23 +18,12 @@ const AddGroupBar =
                         <AddGroupButton Input={Input}/>
                         
                     </div>
-                   
 
-                   
-                
-                
-               
-
-
+                </div>
 
 
             </div>
-
-
-            </div>
-            )
-
-
+        )
 
 
     }
