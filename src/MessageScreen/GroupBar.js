@@ -7,14 +7,14 @@ const AddGroupBar =
 
         return (
             
-            <div class="AddGroupBar" >
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="GroupBarIcon">{IconHandle("3DGlasses")}</button>
+            <div className="AddGroupBar" >
+                <div className="input-group">
+                    <div className="input-group-prepend">
+                        <button className="btn btn-outline-secondary" type="button" id="GroupBarIcon">{IconHandle("3DGlasses")}</button>
                     </div>
 
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
+                    <div className="input-group-prepend">
+                        <button className="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
                         <AddGroupButton Input={Input}/>
                         
                     </div>

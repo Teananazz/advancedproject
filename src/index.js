@@ -10,7 +10,7 @@ import {
     Route,
 } from "react-router-dom";
 
-import Imagehook from './hooks/Imagehook'
+import Filehook from './hooks/Filehook'
 
 
 

@@ -4,11 +4,9 @@
     "\\public",
     "\\src",
     "\\src\\CommonComponents",
-    "\\src\\hooks",
     "\\src\\LoginScreen",
-    "\\src\\MessageScreen",
-    "\\src\\RegisterForm"
+    "\\src\\MessageScreen"
   ],
-  "SelectedNode": "\\src\\RegisterForm\\RegisterScreen.js",
+  "SelectedNode": "\\src\\MessageScreen\\AttachButton.js",
   "PreviewInSolutionExplorer": false
 }

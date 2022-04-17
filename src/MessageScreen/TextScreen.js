@@ -6,7 +6,7 @@ import HoldScreen from './HoldScreen'
 
 const TextScreen =
 
-    ({ Input } ) => {
+    ({ Input, Chat_log } ) => {
          
         {/* probably needs to activate the side bar that indicates the person above the chat here. */}
         const [Activated_Group, setActivated] = useState("-1");
@@ -18,8 +18,8 @@ const TextScreen =
                     return <HoldScreen/> 
 
                 }
-               
-                return <TextBox phone={Activated_Group} Input={Input} />
+              
+                return <TextBox phone={Activated_Group} Input={Input} Logs={Chat_log} />
 
             }
 

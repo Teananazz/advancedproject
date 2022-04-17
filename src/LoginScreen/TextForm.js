@@ -15,7 +15,7 @@ const TextForm =
             (e ,props) => {
 
                 onAttempt(e)
-                console.log(e, props)
+                
 
             }
 

@@ -7,7 +7,7 @@ const Group =
 
         return
         (
-            <div class="Group" />
+            <div className="Group" />
 
             
             

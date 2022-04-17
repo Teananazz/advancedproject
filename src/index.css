@@ -567,3 +567,10 @@ textarea[type=text] {
     border-radius: 30px;
     outline: hidden;
 }
+
+.cancelInput {
+    width: 0px !important;
+    height: 0px;
+
+
+}

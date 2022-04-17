@@ -37,29 +37,29 @@ const LoginScreen =
 
         return (
 
-            < div class="Login">
+            < div className="Login">
                  
-                <div class="LoginBubble">
+                <div className="LoginBubble">
                     
 
                     
-                    <div class="row ">
+                    <div className="row ">
                        
-                        <div class="row-lg-3" />
+                        <div className="row-lg-3" />
                         
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon2"> {IconHandle("FiUser")}  </span>
+                        <div className="input-group mb-3">
+                            <span className="input-group-text" id="basic-addon2"> {IconHandle("FiUser")}  </span>
                             <input type="text" value={user.value} onChange={user.onChange} className="form-control" placeholder="Username" />
 
 
 
                         </div>
 
-                        <div class="input-group mb-3 ">
-                            <span class="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
-                            <input type={Eye.m} value={password.value} onChange={password.onChange} class="form-control" placeholder="Password" />
-                            <div class="input-group-btn">
-                                <button variant="btn btn-outline-primary" onClick={Eye.onChange} class="eyebutton-login"  > {IconHandle(Eye.value)} </button>
+                        <div className="input-group mb-3 ">
+                            <span className="input-group-text" id="basic-addon1">   {IconHandle("FillLock")}   </span>
+                            <input type={Eye.m} value={password.value} onChange={password.onChange} className="form-control" placeholder="Password" />
+                            <div className="input-group-btn">
+                                <button variant="btn btn-outline-primary" onClick={Eye.onChange} className="eyebutton-login"  > {IconHandle(Eye.value)} </button>
 
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const LoginScreen =
 
 
 
-                            <div class="flexbuttons">
+                            <div className="flexbuttons">
                                 <Button onClick={onAttempt} as="input" type="button" variant="btn btn-outline-warning" value="login" className="Test1" />
                                 <Link to="/Register">
                                     <Button as="input" type="button" variant="btn btn-outline-warning" value="Register" className="Test2" />

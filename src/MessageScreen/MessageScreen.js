@@ -2,6 +2,7 @@
 import TextBox from './TextBox'
 import Messages from './Messages';
 import Groups from './Groups';
+
 const MessageScreen =
     () => {
        
@@ -10,7 +11,7 @@ const MessageScreen =
             <>
 
                 
-                <div class="background2" >
+                <div className="background2" >
                     
 
                     <Groups/>

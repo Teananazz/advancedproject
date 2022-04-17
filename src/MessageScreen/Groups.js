@@ -5,16 +5,16 @@ import TextScreen from './TextScreen'
 const Groups =
     () => {
         const Input = Grouphook("");
-
+        
         return (
             <>
 
                
 
-             <GroupBar Input={Input} />
+             <GroupBar  Input={Input} />
 
 
-            <div class="Groups">
+                <div  className="Groups">
 
 
            <GroupListing List= {Input.List}/>

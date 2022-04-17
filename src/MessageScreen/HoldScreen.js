@@ -8,7 +8,7 @@ const HoldScreen =
 
         return (
             
-            <div class = "HoldScreen" / >
+            <div className = "HoldScreen" / >
                
             
             

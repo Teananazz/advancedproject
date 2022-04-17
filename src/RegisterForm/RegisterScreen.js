@@ -7,7 +7,7 @@ import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 import RegisterAuth from './RegisterAuth';
-import Imagehook from '../hooks/Imagehook';
+import Filehook from '../hooks/Filehook';
 import { Link } from 'react-router-dom';
 
 const RegisterScreen =
@@ -18,7 +18,7 @@ const RegisterScreen =
         const passType = Eyehook("FillEye")
         const passTypeR = Eyehook("FillEye")
         const display = useInput("")
-        const photo = Imagehook("")
+        const photo = Filehook("")
 
 
         const onAttempt =
@@ -29,9 +29,7 @@ const RegisterScreen =
                 }
 
                 var check = RegisterAuth(password, passwordvalid)
-                console.log(password)
-                console.log(passwordvalid)
-                console.log(check)
+             
                 if (check === false) {
                     alert("Please fix your password and your password validation")
                     return;
@@ -41,10 +39,7 @@ const RegisterScreen =
 
             }
 
-        const Check
-            = () => {
-                console.log("Yes")
-            }
+     
         return (
             <>
                 <div className="input-group mb-3">
