@@ -7,34 +7,33 @@ const AttachButton =
     (props ) => {
       console.log(props)
 
-        return (
+    return (
 
-           <>
-               
-               
+      <>
 
-                    <input
+        <input
 
-                        type="file" onChange={(e) => {
-                            {/* Using different variables - is it faster ?*/}
-                            var Val = e.target.files[0]
-                            var Val2 = URL.createObjectURL(Val)
-                            var FinalVal = <img src={Val2} width="200" height="200" alt={Val.name} />
+          type="file" onChange={(e) => {
+            {/* Using different variables - is it faster ?*/ }
+            var Val = e.target.files[0]
+            var Val2 = URL.createObjectURL(Val)
+            var FinalVal = <img src={Val2} width="200" height="200" alt={Val.name} />
 
-                            var phone = props.phone;
-                            props.Logs.UpdateFileLog({ phone, FinalVal } );
-                            props.func();
+            var phone = props.phone;
+            props.Logs.UpdateFileLog({ phone, FinalVal });
+            props.func();
 
-                          }
-                        }
+          } }
 
-                        className="DropUpButtons cancelInput" id="inputGroupFile01" />
+          className="DropUpButtons cancelInput" id="inputGroupFile01" />
 
-                    <label className="DropUpButtons" htmlFor="inputGroupFile01">{IconHandle("Picture")}</label>
-                
-             </>
-            )
+        <label className="DropUpButtons" htmlFor="inputGroupFile01">{IconHandle("Picture")}</label>
+        <button className="DropUpButtons" >{IconHandle("Video")}</button>
+        <button className="DropUpButtons" >{IconHandle("Voice")}</button>
+
+      </>
+    )
 
 
-    }
+  }
 export default AttachButton;
