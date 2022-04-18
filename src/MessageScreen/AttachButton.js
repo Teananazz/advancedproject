@@ -5,10 +5,10 @@ import IconHandle from "../CommonComponents/IconHandler"
 import { useState } from 'react'
 
 const AttachButton =
-    (props ) => {
-      console.log(props)
+  (props) => {
+    console.log(props)
 
-        return (
+    return (
 
       <>
 
@@ -24,15 +24,15 @@ const AttachButton =
             props.Logs.UpdateFileLog({ phone, FinalVal });
             props.func();
 
-          } }
+          }}
 
           className="DropUpButtons cancelInput" id="inputGroupFile01" />
 
-                    <label className="DropUpButtons" htmlFor="inputGroupFile01">{IconHandle("Picture")}</label>
-                
-             </>
-            )
+        <label className="DropUpButtons" htmlFor="inputGroupFile01">{IconHandle("Picture")}</label>
+        <label className="DropUpButtons" htmlFor="inputGroupFile01">{IconHandle("Video")}</label>
+      </>
+    )
 
 
-    }
+  }
 export default AttachButton;
