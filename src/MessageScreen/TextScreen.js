@@ -10,7 +10,7 @@ const TextScreen =
          
         {/* probably needs to activate the side bar that indicates the person above the chat here. */}
         const [Activated_Group, setActivated] = useState("-1");
-        
+        const [user, setUser] = useState("")
         const GiveScreen =
             () => {
 
@@ -18,20 +18,21 @@ const TextScreen =
                     return <HoldScreen/> 
 
                 }
-              
-                return <TextBox phone={Activated_Group} Input={Input} Logs={Chat_log} />
+                
+
+                return <TextBox phone={Activated_Group} Input={Input} Logs={Chat_log} name={user} />
 
             }
 
        
 
         const Activate =
-            (value) => {
+            (props) => {
                 
                
 
-
-                setActivated(value);
+                setUser(props.name);
+                setActivated(props.phone);
               
             }
         

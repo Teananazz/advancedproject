@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 const AttachButton =
     (props ) => {
-      console.log(props)
+     
 
         return (
 

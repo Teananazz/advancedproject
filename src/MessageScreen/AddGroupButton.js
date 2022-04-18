@@ -8,7 +8,7 @@ import AddUserButton from './AddUserButton'
 const AddGroupButton =
     ({ Input }) => {
         const [show, setShow] = useState(false)
-        /* const [List, UpdateList ] = useState(UserContacts())*/
+    
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
 

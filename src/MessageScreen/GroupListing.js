@@ -19,12 +19,13 @@ const GroupListing =
         var result = Screen.GiveScreen();
        
         const Func =
-            (phone) => {
+            (props) => {
+                
+                var phone = props.phone;
+                var name = props.id;
                 
                 
-             
-                
-                 Screen.Activate( phone )
+                Screen.Activate({ phone, name })
                
                 result = Screen.GiveScreen();
                 
@@ -36,7 +37,7 @@ const GroupListing =
 
         var Mapping = List.map((value) =>
             <div key={Math.random(1000) + 500} className ="flex-down">
-                <Button id="flex" key={value.phone} onClick={() => Func(value.phone)} variant= "outline-secondary" size ="lg" >
+                <Button id="flex" key={value.phone} onClick={() => Func(value)} variant= "outline-secondary" size ="lg" >
             
                     <div  className="textalign ">   {value.id} <br /> {value.phone}    </div>
                 </Button>

@@ -16,7 +16,7 @@ const SoundRecordButton =
 
 
     (props) => {
-        // using this to render the play button.
+        
 
         
         var Obj = {
@@ -70,13 +70,13 @@ const SoundRecordButton =
                     let blob = new Blob(chunks, {
                         'type': 'audio/webm'
                     });
-                    console.log(blob)
+                   
                     chunks = [];
                     let videoURL = window.URL.createObjectURL(blob);
 
 
                     AudioURL = videoURL;
-                    const sound = document.getElementById("audio");
+                 
 
                     var FinalVal =
                         <audio controls>
@@ -85,7 +85,7 @@ const SoundRecordButton =
                     var phone = props.phone;
 
                     props.Logs.UpdateSoundLog({ phone, FinalVal })
-                    props.func();
+                    props.func(); // re-renders TextBox (so it shows it instantly)
                 }
 
 
@@ -99,7 +99,7 @@ const SoundRecordButton =
 
         const Func =
             (e) => {
-                console.log(1);
+               
 
                 if (RecordButton === 0) {
 

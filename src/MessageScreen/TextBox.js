@@ -7,9 +7,9 @@ import React from "react";
 import SoundRecordButton from '../MessageScreen/SoundRecordComponents/SoundRecordButton'
 
 const TextBox =
-    ({ Input, phone, Logs }) => {
+    ({ Input, phone, Logs, name }) => {
 
-
+   
         
         {/* using these two to force this componenet to re-render once an img is sent  */ }
         const [Index, UpdatedIndex] = useState("0");
@@ -17,13 +17,10 @@ const TextBox =
             () => {
                 UpdatedIndex(Index.concat("1"));
 
-
-
             }
        
 
-
-
+       
         
 
         var Chat_Log = Logs.GiveLogs({ phone })
@@ -37,6 +34,11 @@ const TextBox =
 
 
             <>
+                <div class="TitleBar">
+                    {name}
+                    </div>
+
+
 
                 <div className="Messages ">
                     <div className="Down">
