@@ -4,7 +4,7 @@
     "\\public",
     "\\src",
     "\\src\\CommonComponents",
-    "\\src\\LoginScreen",
+    "\\src\\hooks",
     "\\src\\MessageScreen"
   ],
   "SelectedNode": "\\src\\MessageScreen\\AttachButton.js",

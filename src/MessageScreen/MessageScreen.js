@@ -1,6 +1,6 @@
 ﻿
 import TextBox from './TextBox'
-import Messages from './Messages';
+
 import Groups from './Groups';
 
 const MessageScreen =

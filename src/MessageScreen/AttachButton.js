@@ -3,10 +3,11 @@
 import FileInput from '../CommonComponents/FileInput'
 import IconHandle from "../CommonComponents/IconHandler"
 import { useState } from 'react'
+
 const AttachButton =
     (props ) => {
-      console.log(props)
-
+      
+        
         return (
 
            <>

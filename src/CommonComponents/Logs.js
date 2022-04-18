@@ -88,11 +88,36 @@ const Logs =
 
             }
 
+        const UpdateSoundLog =
+            ({ phone, FinalVal }) => {
+
+                if (Logs.has(phone) === false) {
+
+
+
+                    Logs.set(phone, [])
+
+                    Logs.get(phone).push(FinalVal)
+
+
+                    return;
+
+                }
 
 
 
 
-        return ({ Logs, UpdateLogs, GiveLogs, UpdateLocalLogs, UpdateFileLog} )
+                Logs.get(phone).push(FinalVal)
+                
+                return;
+
+
+
+            }
+
+
+
+        return ({ Logs, UpdateLogs, GiveLogs, UpdateLocalLogs, UpdateFileLog, UpdateSoundLog} )
 
 
 

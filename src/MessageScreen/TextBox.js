@@ -4,12 +4,13 @@ import IconHandle from "../CommonComponents/IconHandler"
 import AttachButton from './AttachButton'
 import { useState } from 'react'
 import React from "react";
+import SoundRecordButton from '../MessageScreen/SoundRecordComponents/SoundRecordButton'
 
 const TextBox =
     ({ Input, phone, Logs }) => {
 
 
-
+        
         {/* using these two to force this componenet to re-render once an img is sent  */ }
         const [Index, UpdatedIndex] = useState("0");
         const ChangeTextBox =
@@ -19,10 +20,11 @@ const TextBox =
 
 
             }
+       
 
 
 
-        console.log("rendered")
+        
 
         var Chat_Log = Logs.GiveLogs({ phone })
 
@@ -64,8 +66,10 @@ const TextBox =
 
                                 </div>
                             </div>
-                            <button className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("3DGlasses")}</button>
-
+                           
+                            <SoundRecordButton Logs={Logs} phone={phone} func={ChangeTextBox}/>
+                            
+                            
                         </div>
                     </div>
 
