@@ -10,12 +10,16 @@ const MessageScreen =
              
             <>
 
-                
+                <div class="container-fluid">
+               
                 <div className="background2" >
                     
 
                     <Groups/>
 
+                    </div>
+
+                    
                 </div>
              </>   
             )
