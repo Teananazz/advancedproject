@@ -1,28 +1,38 @@
 
 import IconHandle from "../CommonComponents/IconHandler"
 import AddGroupButton from './AddGroupButton'
+import { Container, Row, Col } from 'react-bootstrap'
 const AddGroupBar =
+
     ({ Input }) => {
 
 
         return (
-            
-            <div className="AddGroupBar" >
-                <div className="input-group">
-                    <div className="input-group-prepend">
-                        <button className="btn btn-outline-secondary" type="button" id="GroupBarIcon">{IconHandle("3DGlasses")}</button>
-                    </div>
 
-                    <div className="input-group-prepend">
-                        <button className="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
-                        <AddGroupButton Input={Input}/>
+            <Container fluid="md">
+               
+
+                <Row>
+                    <div className="AddGroupBar" >
+                       <Col>
+                           
+  
+                         <button className="btn btn-outline-secondary" type="button" id="GroupBarIcon">{IconHandle("3DGlasses")}</button>
+                                
+                       </Col>
                         
-                    </div>
+                            <Col>
+                                <button className="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
+                            </Col>
 
-                </div>
-
-
-            </div>
+                            <Col>
+                                <AddGroupButton Input={Input} />
+                        </Col>
+                        </div>
+                    </Row>
+               
+                   
+            </Container>
         )
 
 

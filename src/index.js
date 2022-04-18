@@ -4,6 +4,7 @@ import './index.css';
 import MessageScreen from './MessageScreen/MessageScreen'
 import LoginScreen from './LoginScreen/LoginScreen';
 import RegisterScreen from './RegisterForm/RegisterScreen';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter,
     Routes,

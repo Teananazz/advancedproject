@@ -2,34 +2,46 @@ import Grouphook from '../hooks/Grouphook'
 import GroupBar from './GroupBar';
 import GroupListing from './GroupListing'
 import TextScreen from './TextScreen'
+import { Container, Row, Col } from 'react-bootstrap'
 const Groups =
     () => {
         const Input = Grouphook("");
-        
+
         return (
-            <>
+            
 
 
 
-             <GroupBar  Input={Input} />
+            <Container fluid="md">
+                
+                <Row >
+                    <Col md="auto" className="Groups">
+                         <GroupBar Input={Input} />
+
+                    </Col>
+
+                    <Col md="auto">
+                        <GroupListing List={Input.List} />
+                        </Col>
+              
+                </Row>
+            </Container>
 
 
-                <div  className="Groups">
-
-
-                    <GroupListing List={Input.List} />
-
-                </div>
-
-
-
-
-            </>
-
-
-
-
+           
         )
+
+
+
+                            
+                       
+                       
+                   
+               
+
+   
+
+        
 
 
 

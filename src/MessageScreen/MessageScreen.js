@@ -2,27 +2,25 @@
 import TextBox from './TextBox'
 
 import Groups from './Groups';
+import {Container,Row,Col} from 'react-bootstrap'
 
 const MessageScreen =
     () => {
-       
+
         return (
-             
-            <>
+            
 
-                <div class="container-fluid">
-               
-                <div className="background2" >
-                    
-
-                    <Groups/>
-
-                    </div>
-
-                    
-                </div>
-             </>   
+            <Container fluid>
+                <Row className ="background2">
+                    <Col>
+                        <Groups class="heightIncrase" /> 
+                        </Col>
+                </Row>
+            </Container>
             )
+         
+            
+        
 
 
 
