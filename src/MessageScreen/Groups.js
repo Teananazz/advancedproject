@@ -3,25 +3,24 @@ import GroupBar from './GroupBar';
 import GroupListing from './GroupListing'
 import TextScreen from './TextScreen'
 import { Container, Row, Col } from 'react-bootstrap'
-const Groups =
-    () => {
-        const Input = Grouphook("");
 
+const Groups =
+    ({ Contacts }) => {
+        const Input = Grouphook({ Contacts });
+       
+        
         return (
             
-
-
-
             <Container fluid="md">
                 
                 <Row >
                     <Col md="auto" className="Groups">
-                         <GroupBar Input={Input} />
+                        <GroupBar Input={Input} Contacts={Contacts} />
 
                     </Col>
 
                     <Col md="auto">
-                        <GroupListing List={Input.List} />
+                        {<GroupListing List={Input.List} Contacts={Contacts} />}
                         </Col>
               
                 </Row>

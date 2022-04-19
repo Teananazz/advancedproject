@@ -3,9 +3,10 @@ const Filehook = (defaultValue) => {
 	const [value, setValue] = useState(null);
 	var val;
 	const onChange = (e) => {
-		val = e.target.files[0];
-		setValue(e.target.files[0]);
-		console.log(val)
+		var Val = e.target.files[0]
+		var Val2 = URL.createObjectURL(Val)
+		setValue(Val2);
+		
 	}
 
 	return (

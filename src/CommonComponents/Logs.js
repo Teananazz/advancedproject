@@ -9,16 +9,16 @@ const Logs =
       
        
         const GiveLogs =
-            ({ phone }) => {
+            ({ id }) => {
 
-                return Logs.get(phone);
+                return Logs.get(id);
 
 
             }
 
 
         const UpdateLocalLogs =
-            ({ phone }) => {
+            ({ id }) => {
                
                   
               
@@ -29,13 +29,13 @@ const Logs =
 
 
 
-                        if (Logs.has(phone) === false) {
+                        if (Logs.has(id) === false) {
 
 
 
-                            Logs.set(phone, [])
+                            Logs.set(id, [])
 
-                            Logs.get(phone).push(Input.value)
+                            Logs.get(id).push(Input.value)
                             UpdateLogs(Logs)
                             Input.setValue("")
 
@@ -43,11 +43,11 @@ const Logs =
 
                         }
 
-                        Input.UpdateListUser({ phone })
+                        Input.UpdateListUser({ id })
 
 
 
-                        Logs.get(phone).push(Input.value)
+                        Logs.get(id).push(Input.value)
                 Input.setValue("")
 
                         return;
@@ -61,15 +61,15 @@ const Logs =
             }
 
         const UpdateFileLog =
-            ({ phone, FinalVal }) => {
+            ({ id, FinalVal }) => {
                 
-                if (Logs.has(phone) === false) {
+                if (Logs.has(id) === false) {
 
               
 
-                    Logs.set(phone, [])
+                    Logs.set(id, [])
 
-                    Logs.get(phone).push(FinalVal)
+                    Logs.get(id).push(FinalVal)
                    
                     
                     return;
@@ -79,7 +79,7 @@ const Logs =
 
 
 
-                Logs.get(phone).push(FinalVal)
+                Logs.get(id).push(FinalVal)
                
                 return;
 
@@ -89,15 +89,15 @@ const Logs =
             }
 
         const UpdateSoundLog =
-            ({ phone, FinalVal }) => {
+            ({ id, FinalVal }) => {
 
-                if (Logs.has(phone) === false) {
+                if (Logs.has(id) === false) {
 
 
 
-                    Logs.set(phone, [])
+                    Logs.set(id, [])
 
-                    Logs.get(phone).push(FinalVal)
+                    Logs.get(id).push(FinalVal)
 
 
                     return;
@@ -107,7 +107,7 @@ const Logs =
 
 
 
-                Logs.get(phone).push(FinalVal)
+                Logs.get(id).push(FinalVal)
                 
                 return;
 

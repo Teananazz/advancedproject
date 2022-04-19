@@ -9,12 +9,12 @@ import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 import { Link } from "react-router-dom";
 const LoginScreen =
-    () => {
+    ({ Contacts }) => {
         const user = useInput("");
         const password = useInput("");
         const Eye = Eyehook("FillEye");
 
-
+       
         const onAttempt =
             () => {
                 if (user.value === '' || password.value === '') {
@@ -22,7 +22,7 @@ const LoginScreen =
                     return;
                 }
 
-                var check = UserAuth(user, password)
+                var check = UserAuth({Contacts, user, password })
                 if (!check) {
 
                     alert("Incorrect user/password")

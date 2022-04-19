@@ -60,8 +60,8 @@ const AttachButton =
                          </div>
                         </>
                          
-            var phone = props.phone;
-            props.Logs.UpdateFileLog({ phone, FinalVal });
+            var id = props.id;
+            props.Logs.UpdateFileLog({ id, FinalVal });
             props.func();
 
           }}
@@ -80,8 +80,8 @@ const AttachButton =
                         <video width ="320" height = "240" controls>
                         <source src={Val2} type ="video/mp4" />
                             </video>
-                    var phone = props.phone;
-                    props.Logs.UpdateFileLog({ phone, FinalVal });
+                    var id = props.id;
+                    props.Logs.UpdateFileLog({ id, FinalVal });
                     props.func();
 
                 }}

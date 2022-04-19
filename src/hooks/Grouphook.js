@@ -4,13 +4,13 @@ import UserContacts from '../CommonComponents/UserContacts'
 
 import { useState } from "react";
 
-const Grouphook = (defaultValue) => {
+const Grouphook = ({ Contacts }) => {
 
     const [List, UpdateList] = useState([]);
-    const [ContactList, UpdateContactList] = useState(UserContacts())
+    const [ContactList, UpdateContactList] = useState(Contacts.Users)
+  
 
-
-    const UniqueContact = ContactList.map((value) =>  value.phone );
+    const UniqueContact = ContactList.map((value) =>  value.id );
       
 
 
@@ -22,21 +22,13 @@ const Grouphook = (defaultValue) => {
                 return;
             }
 
-
-            var PhoneList = List.map((mem) => mem.phone);
-            
-            if (PhoneList.indexOf(value.phone) != -1) {
-              
-                return;
-            }
-            var Index = UniqueContact.indexOf(value.phone);
-            ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
-            UpdateContactList(ContactList)
+            var Index = UniqueContact.indexOf(value.id);
+            //ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
+            UpdateContactList(ContactList.splice(Index,1))
          
            
             UpdateList(List.concat( value  ));
-            
-
+          
 
 
 

@@ -3,10 +3,12 @@
     "",
     "\\public",
     "\\src",
+    "\\src\\ChatScreen",
     "\\src\\CommonComponents",
     "\\src\\hooks",
+    "\\src\\LoginScreen",
     "\\src\\MessageScreen"
   ],
-  "SelectedNode": "\\src\\MessageScreen\\AttachButton.js",
+  "SelectedNode": "\\src\\MessageScreen\\MessageScreen.js",
   "PreviewInSolutionExplorer": false
 }

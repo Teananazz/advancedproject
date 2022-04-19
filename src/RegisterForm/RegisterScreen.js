@@ -9,9 +9,10 @@ import Eyehook from "../hooks/Eyehook"
 import RegisterAuth from './RegisterAuth';
 import Filehook from '../hooks/Filehook';
 import { Link } from 'react-router-dom';
-
+import {InputGroup, FormControl, Form} from 'react-bootstrap'
+import UserContacts from '../CommonComponents/UserContacts'
 const RegisterScreen =
-    () => {
+    ({ Contacts } ) => {
         const user = useInput("")
         const password = useInput("")
         const passwordvalid = useInput("")
@@ -20,101 +21,137 @@ const RegisterScreen =
         const display = useInput("")
         const photo = Filehook("")
 
-
+        console.log("render")
         const onAttempt =
             () => {
-                if (user === '' || password === '' || passwordvalid === '' || display === '') {
+                if (user.value === '' || password.value === '' || passwordvalid.value === '' || display.value === '' || photo.value ==='') {
                     alert("One or more fields empty")
                     return;
                 }
-
-                var check = RegisterAuth(password, passwordvalid)
+                var img = photo.value
+                var displayval = display.value;
+                var check = RegisterAuth({Contacts, user, password, passwordvalid })
              
                 if (check === false) {
-                    alert("Please fix your password and your password validation")
+                    user.setValue("")
+                    password.setValue("")
+                    passwordvalid.setValue("")
+                    display.setValue("")
+                    photo.setValue("")
                     return;
                 }
 
                 alert("Connecting ") // just for checking - later will change
+                var userinfo = user.value;
 
+
+
+                var userpassword = password.value;
+                Contacts.UpdateList({ userinfo, userpassword, img, displayval})
+
+                user.setValue("")
+                password.setValue("")
+                passwordvalid.setValue("")
+                display.setValue("")
+                
+                
+               
             }
 
      
         return (
             <>
-                <div className="input-group mb-3">
-                    <span className="input-group-text"
-                        id="basic-addon1">   {IconHandle("FiUser")}   </span>
-                    <input type="text"
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="basic-addon1">
+                        {IconHandle("FiUser")}
+                    </InputGroup.Text>
+                    <Form.Control type="text"
                         value={user.value}
                         onChange={user.onChange}
                         className="form-control"
-                        placeholder="Username"
-                    />
-                </div>
+                        placeholder="UserName"
+                       />
+                    </InputGroup>
 
-
-                <div className="input-group mb-3">
-                    <span className="input-group-text " id="basic-addon1">   {IconHandle("FillLock")}   </span>
-                    <input type={passType.m}
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="basic-addon1">
+                        {IconHandle("FillLock")}
+                    </InputGroup.Text>
+                    <Form.Control type={passType.m}
                         value={password.value}
                         onChange={password.onChange}
                         className="form-control"
                         placeholder="Password"
                     />
+                    
+                    <Button variant="outline-secondary"
+                        onClick={passType.onChange}
+                        id="button-addon2"
+                        className="eyebutton-login2"
+                    >
+                        {IconHandle(passType.value)}
+                        </Button>
+                        
+                </InputGroup>
 
-                    <div className="input-group-btn">
-                        <button variant="btn btn-outline-primary" onClick={passType.onChange} className="eyebutton-login"  >
-                            {IconHandle(passType.value)}
-                        </button>
-                    </div>
-                </div>
 
-
-
-                <div className="input-group mb-3">
-                    <span className="input-group-text" id="basic-addon1">   {IconHandle("ArrowRepeat")}   </span>
-                    <input type={passTypeR.m}
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="basic-addon1">
+                        {IconHandle("ArrowRepeat")}
+                    </InputGroup.Text>
+                    <Form.Control type={passTypeR.m}
                         value={passwordvalid.value}
                         onChange={passwordvalid.onChange}
                         className="form-control"
                         placeholder="Password validation"
                     />
 
-                    <div className="input-group-btn">
-                        <button variant="btn btn-outline-primary" onClick={passTypeR.onChange} className="eyebutton-login"  >
-                            {IconHandle(passTypeR.value)}
-                        </button>
-                    </div>
-                </div>
+                    <Button variant="outline-secondary"
+                        onClick={passTypeR.onChange}
+                        id="button-addon2"
+                        className="eyebutton-login2"
+                    >
+                        {IconHandle(passTypeR.value)}
+                    </Button>
 
+                </InputGroup>
 
-
-                <div className="input-group mb-3">
-                    <span className="input-group-text"
-                        id="basic-addon1">   {IconHandle("FiUser")}   </span>
-                    <input type="text"
+               
+             
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="basic-addon1">
+                        {IconHandle("FiUser")}
+                    </InputGroup.Text>
+                    <Form.Control type="text"
                         value={display.value}
                         onChange={display.onChange}
-
                         className="form-control"
                         placeholder="Displayname"
                     />
-                </div>
+                </InputGroup>
+
+           
+
+             
                 <>
-
-                    <div class="input-group">
-                        <input onChange={photo.onChange} type="file" class="form-control"  aria-label="Upload"/>
-        
-                        <img src={photo.file} width="200" height="200"  />
-                        
-                    </div>
-
+                    <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon1">
+                            <img src={photo.value} width="200" height="200" />
+                        </InputGroup.Text>
+                        <Form.Control type="file"
                    
-                   
+                            onChange={photo.onChange}
+                            className="form-control"
+                            placeholder="Displayname"
+                            aria-label="Upload"
+                        />
+                    </InputGroup>
+
+                    
+                 
                     <div class="flexbuttons">
 
-                        <Link to="/Login">
+                        <Link to="/">
                             <Button as="input" type="button" variant="btn btn-outline-warning" value="Back" className="Test2" />
                         </Link>                       
 

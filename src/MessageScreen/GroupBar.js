@@ -4,7 +4,7 @@ import AddGroupButton from './AddGroupButton'
 import { Container, Row, Col } from 'react-bootstrap'
 const AddGroupBar =
 
-    ({ Input }) => {
+    ({ Input, Contacts }) => {
 
 
         return (
@@ -26,7 +26,7 @@ const AddGroupBar =
                             </Col>
 
                             <Col>
-                                <AddGroupButton Input={Input} />
+                            <AddGroupButton Input={Input} Contacts={Contacts} />
                         </Col>
                         </div>
                     </Row>

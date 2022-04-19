@@ -19,8 +19,7 @@ const TextScreen =
 
                 }
                 
-
-                return <TextBox phone={Activated_Group} Input={Input} Logs={Chat_log} name={user} />
+                return <TextBox id={Activated_Group} Input={Input} Logs={Chat_log} name={user} />
 
             }
 
@@ -32,7 +31,7 @@ const TextScreen =
                
 
                 setUser(props.name);
-                setActivated(props.phone);
+                setActivated(props.id);
               
             }
         

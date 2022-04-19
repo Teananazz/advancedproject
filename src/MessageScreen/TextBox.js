@@ -7,7 +7,7 @@ import React from "react";
 import SoundRecordButton from '../MessageScreen/SoundRecordComponents/SoundRecordButton'
 
 const TextBox =
-    ({ Input, phone, Logs, name }) => {
+    ({ id, Input,  Logs, name }) => {
 
    
         
@@ -23,7 +23,7 @@ const TextBox =
        
         
 
-        var Chat_Log = Logs.GiveLogs({ phone })
+        var Chat_Log = Logs.GiveLogs({id })
 
 
         var Log = Chat_Log?.map((value) => <li key={Math.random().toString(36).substr(2, 9)} className="HostMessages">  {value}   </li>);
@@ -54,7 +54,7 @@ const TextBox =
                     <div className="input-group">
                         <div className="input-group-prepend">
 
-                            <button onClick={() => { Logs.UpdateLocalLogs({ phone }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
+                            <button onClick={() => { Logs.UpdateLocalLogs({ id }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
 
                         </div>
                         <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
@@ -64,12 +64,12 @@ const TextBox =
                             <div className="dropup">
                                 <button className="dropbtn" id="button-72"> {IconHandle("AttachFile")}</button>
                                 <div className="dropup-content">
-                                    <AttachButton Logs={Logs} phone={phone} func={ChangeTextBox} />
+                                    <AttachButton Logs={Logs} id={id} func={ChangeTextBox} />
 
                                 </div>
                             </div>
                            
-                            <SoundRecordButton Logs={Logs} phone={phone} func={ChangeTextBox}/>
+                            <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox}/>
                             
                             
                         </div>

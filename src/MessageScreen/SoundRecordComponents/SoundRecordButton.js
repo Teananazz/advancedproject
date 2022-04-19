@@ -82,9 +82,9 @@ const SoundRecordButton =
                         <audio controls>
                             <source src={AudioURL} />
                         </audio>
-                    var phone = props.phone;
+                    var id = props.id;
 
-                    props.Logs.UpdateSoundLog({ phone, FinalVal })
+                    props.Logs.UpdateSoundLog({ id, FinalVal })
                     props.func(); // re-renders TextBox (so it shows it instantly)
                 }
 
