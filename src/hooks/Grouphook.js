@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const Grouphook = ({ Contacts }) => {
 
-    const [List, UpdateList] = useState([]);
-    const [ContactList, UpdateContactList] = useState(Contacts.Users)
+    var [List, UpdateList] = useState([]);
+   var [ContactList, UpdateContactList] = useState(Contacts.Users)
   
 
     const UniqueContact = ContactList.map((value) =>  value.id );
@@ -21,13 +21,15 @@ const Grouphook = ({ Contacts }) => {
                 // need to change it.
                 return;
             }
-
+            console.log(value);
             var Index = UniqueContact.indexOf(value.id);
-            //ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
-            UpdateContactList(ContactList.splice(Index,1))
-         
+            console.log(Index);
+            ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
+            UpdateContactList(ContactList)
            
-            UpdateList(List.concat( value  ));
+           
+            UpdateList(List.concat(value));
+            List = List.concat(value);
           
 
 

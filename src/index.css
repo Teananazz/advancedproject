@@ -80,17 +80,19 @@ code {
     position: absolute;
     width: 100%;
     background-color: springgreen;
+    right: 0.1vw;
 }
 
 .flex-down {
     display:flex;
  position:relative;
-  margin:auto;
-  margin-top: 8px;
   
-  margin-bottom: 100px;
-
- width: 100%;
+  margin-top: 1vh;
+  right: auto;
+  margin-bottom: 10vh;
+  right: 0.25vw;
+  width: 20vw;
+   
  
  
 
@@ -301,31 +303,51 @@ textarea[type=text] {
 
 
 .Down {
-    margin-top: 40%;
+
+    
 }
 
 
 .Groups {
     display:flex;
    
-    border-radius: 20px;
-    bottom: 30%;
+    border-radius: 10px;
+    bottom: 30vh;
     
     height: 70vh;
-    width: 30% !important;
+    width: 20vw !important;
     
     background-color: #222e35;
  
 }
 
-.AddGroupBar {
+.WindowGroups {
+    all: initial;
     display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-self: center;
-    justify-content: center;
-    background-color: #111b21;
+    position: absolute;
+    border-radius: 10px;
+    left: 10vw;
+    height: 70vh;
+    bottom: 10vh;
+    left: 17.5vw;
+    width: 15vw !important;
+    background-color: #222e35;
+}
 
+.left-align {
+
+    left: 100vw;
+
+}
+
+.AddGroupBar {
+    all: initial;
+    display: flex;
+    bottom: 0;
+    position: relative;
+    width: 15vw !important;
+    height: 80vh !important;
+    background-color: #111b21;
 }
 
 #GroupBarButtons {
@@ -445,8 +467,16 @@ textarea[type=text] {
 }
 
 .textalign {
-
-    text-align:center;
+    
+    display:flex;
+    align-content:center;
+    align-self:center;
+    align-items:center;
+    justify-content:center;
+    justify-self:center;
+    justify-items:center;
+    
+    
     height: 100%;
     width: 100%;
 
@@ -732,3 +762,48 @@ textarea[type=text] {
     font-size: 15px;
 }
 
+
+.AlignPicture {
+
+    display:flex;
+    border-radius:10px;
+    color:antiquewhite;
+
+
+}
+
+.GroupButton {
+    
+    all:initial;
+    position:absolute;
+    margin:auto;
+    left: 23vw;
+    top: 25vh;
+    
+    background-color:green;
+
+
+
+
+}
+
+.left {
+    display:flex;
+    align-self:center;
+    
+     
+     width: 15vw;
+     
+     right: 19vw;
+    top: 15vh;
+    
+
+}
+
+.ButtonGroup {
+    position:absolute;
+    margin-top: 0px !important;
+    
+    
+
+}

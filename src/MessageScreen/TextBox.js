@@ -57,7 +57,14 @@ const TextBox =
                             <button onClick={() => { Logs.UpdateLocalLogs({ id }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
 
                         </div>
-                        <textarea value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+                        <textarea onKeyDown={(e) =>
+                        {
+                            if (e.key === "Enter") {
+                                Logs.UpdateLocalLogs({ id })
+                            }
+                        }
+                     }
+                            value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
 
                         <div className="input-group-prepend">
 

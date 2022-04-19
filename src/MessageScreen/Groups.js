@@ -14,7 +14,7 @@ const Groups =
             <Container fluid="md">
                 
                 <Row >
-                    <Col md="auto" className="Groups">
+                    <Col md="auto" >
                         <GroupBar Input={Input} Contacts={Contacts} />
 
                     </Col>
