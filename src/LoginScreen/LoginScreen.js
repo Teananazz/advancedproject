@@ -8,13 +8,16 @@ import useInput from "../hooks/UserInput";
 import IconHandle from "../CommonComponents/IconHandler"
 import Eyehook from "../hooks/Eyehook"
 import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
 const LoginScreen =
     ({ Contacts }) => {
         const user = useInput("");
         const password = useInput("");
         const Eye = Eyehook("FillEye");
-
-       
+        console.log(Contacts);
+        let navigate = useNavigate();
         const onAttempt =
             () => {
                 if (user.value === '' || password.value === '') {
@@ -30,6 +33,9 @@ const LoginScreen =
                 }
 
                 alert("Connecting ") // just for checking - later will change
+                
+                let path = 'App';
+                navigate(path);
 
             }
 

@@ -11,6 +11,8 @@ import Filehook from '../hooks/Filehook';
 import { Link } from 'react-router-dom';
 import {InputGroup, FormControl, Form} from 'react-bootstrap'
 import UserContacts from '../CommonComponents/UserContacts'
+
+import { useNavigate } from "react-router-dom";
 const RegisterScreen =
     ({ Contacts } ) => {
         const user = useInput("")
@@ -20,7 +22,7 @@ const RegisterScreen =
         const passTypeR = Eyehook("FillEye")
         const display = useInput("")
         const photo = Filehook("")
-
+        let navigate = useNavigate();
         console.log("render")
         const onAttempt =
             () => {
@@ -41,10 +43,10 @@ const RegisterScreen =
                     return;
                 }
 
-                alert("Connecting ") // just for checking - later will change
+                alert("Register Complete ") // just for checking - later will change
                 var userinfo = user.value;
 
-
+               
 
                 var userpassword = password.value;
                 Contacts.UpdateList({ userinfo, userpassword, img, displayval})
@@ -53,6 +55,11 @@ const RegisterScreen =
                 password.setValue("")
                 passwordvalid.setValue("")
                 display.setValue("")
+
+
+                let path = '/'
+                // this will teleport to the login screen without reloading.
+                navigate(path);
                 
                 
                

@@ -21,9 +21,9 @@ const Grouphook = ({ Contacts }) => {
                 // need to change it.
                 return;
             }
-            console.log(value);
+          
             var Index = UniqueContact.indexOf(value.id);
-            console.log(Index);
+           
             ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
             UpdateContactList(ContactList)
            

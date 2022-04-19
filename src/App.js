@@ -22,12 +22,12 @@ const App =
         <BrowserRouter>
             <Routes>
 
-                {/*<Route path="/" element={  <LoginScreen Contacts={Contacts} /> } />}*/}
+                    {<Route path="/" element={  <LoginScreen Contacts={Contacts} /> } />}
                   
                     {<Route path="Register" element={<RegisterScreen Contacts={Contacts} />} />}
 
-                 {/*   {<Route path="App" element={<MessageScreen Contacts={Contacts} />} />}*/}
-                    {<Route path="/" element={<MessageScreen Contacts={Contacts} />} />}
+                    {<Route path="App" element={<MessageScreen Contacts={Contacts} />} />}
+                   {/* {<Route path="/" element={<MessageScreen Contacts={Contacts} />} />}*/}
 
             </Routes>
         </BrowserRouter>

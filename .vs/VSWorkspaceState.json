@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\ChatScreen",
     "\\src\\CommonComponents",
     "\\src\\hooks",
     "\\src\\LoginScreen",
     "\\src\\MessageScreen",
-    "\\src\\MessageScreen\\SoundRecordComponents"
+    "\\src\\MessageScreen\\SoundRecordComponents",
+    "\\src\\RegisterForm"
   ],
   "SelectedNode": "\\src\\MessageScreen\\GroupListing.js",
   "PreviewInSolutionExplorer": false
