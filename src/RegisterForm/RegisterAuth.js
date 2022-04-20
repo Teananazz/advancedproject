@@ -51,6 +51,9 @@ const RegisterAuth =
                 check = true;
             }
         }
+        if (check === false) {
+            alert("Need numbers in password")
+        }
         return check;
     }
 

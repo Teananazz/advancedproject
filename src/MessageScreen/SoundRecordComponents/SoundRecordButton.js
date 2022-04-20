@@ -125,8 +125,7 @@ const SoundRecordButton =
 
         return (
             <>
-                <button onClick={(e)=> Func(e)} id="voicestartbtn" className="btn btn-outline-secondary" type="button">{IconHandle("Voice")}</button>
-              
+                <button onClick={(e)=> Func(e)} id="button-72" className="btn btn-outline-secondary" type="button">{IconHandle("Voice")}</button>
             </>
 
         )
