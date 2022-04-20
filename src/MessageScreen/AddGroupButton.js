@@ -26,7 +26,8 @@ const AddGroupButton =
                 variant="outline-secondary">
                 <div className="GroupCanditate">
 
-                    {value.nickname} <br /> <img src= {value.img} height="50" width="50"/> <br />
+                    {value.nickname} <br /> <img src={value.img} height="50" width="50" /> <br />
+
 
                 </div>  </Button>)
 

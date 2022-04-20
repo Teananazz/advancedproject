@@ -89,7 +89,7 @@ code {
   
   margin-top: 1vh;
   right: auto;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
   right: 0.25vw;
   width: 20vw;
    
@@ -805,5 +805,14 @@ textarea[type=text] {
     margin-top: 0px !important;
     
     
+
+}
+
+.Block {
+
+    border-radius: 10px;
+    
+
+
 
 }

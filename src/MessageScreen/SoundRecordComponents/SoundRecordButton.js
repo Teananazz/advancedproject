@@ -16,6 +16,7 @@ const SoundRecordButton =
 
 
     (props) => {
+
         
 
         
@@ -76,7 +77,10 @@ const SoundRecordButton =
 
 
                     AudioURL = videoURL;
-                 
+
+                
+
+
 
                     var FinalVal =
                         <audio controls>
@@ -84,8 +88,9 @@ const SoundRecordButton =
                         </audio>
                     var id = props.id;
 
-                    props.Logs.UpdateSoundLog({ id, FinalVal })
+                    props.Logs.UpdateSoundLog({id, FinalVal })
                     props.func(); // re-renders TextBox (so it shows it instantly)
+                    props.forceGroupListing();
                 }
 
 

@@ -35,34 +35,36 @@ const AttachButton =
                                     (e) => {
                                         var ModalImg = document.getElementById("ModalImg");
                                         var BigImg = document.getElementById("BigImg");
-                                       
+
                                         BigImg.src = e.target.src;
-                                        ModalImg.style.display ="block"
-                                        
+                                        ModalImg.style.display = "block"
+
 
                                     }
 
                                 }
                             />
-                              
-                            
-                            <div id="ModalImg" class ="modal">
+
+
+                            <div id="ModalImg" class="modal">
 
                                 <span class="close" onClick=
                                     {(e) => {
-                                    var ModalImg = document.getElementById("ModalImg");
-                                    ModalImg.style.display="none"
+                                        var ModalImg = document.getElementById("ModalImg");
+                                        ModalImg.style.display = "none"
 
                                     }}
-                                    
-                                    > &times; </span>
-                            <img class="modal-content" id="BigImg"/>
-                         </div>
-                        </>
-                         
+
+                                > &times; </span>
+                                <img class="modal-content" id="BigImg" />
+                            </div>
+                        </>;
+
+           
             var id = props.id;
             props.Logs.UpdateFileLog({ id, FinalVal });
-            props.func();
+                    props.func();
+                    props.forceGroupListing();
 
           }}
 

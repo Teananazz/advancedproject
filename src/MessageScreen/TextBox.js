@@ -7,9 +7,9 @@ import React from "react";
 import SoundRecordButton from '../MessageScreen/SoundRecordComponents/SoundRecordButton'
 
 const TextBox =
-    ({ id, Input,  Logs, name }) => {
+    ({ id, Input, Logs, name, ForceGroupListing }) => {
 
-   
+    
         
         {/* using these two to force this componenet to re-render once an img is sent  */ }
         const [Index, UpdatedIndex] = useState("0");
@@ -71,12 +71,12 @@ const TextBox =
                             <div className="dropup">
                                 <button className="dropbtn" id="button-72"> {IconHandle("AttachFile")}</button>
                                 <div className="dropup-content">
-                                    <AttachButton Logs={Logs} id={id} func={ChangeTextBox} />
+                                    <AttachButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing} />
 
                                 </div>
                             </div>
                            
-                            <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox}/>
+                            <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing}/>
                             
                             
                         </div>
