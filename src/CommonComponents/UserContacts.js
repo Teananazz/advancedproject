@@ -29,6 +29,18 @@ const UserContacts =
                     img: '/logo192.png', // need to fill it.
                    nickname: 'lmao10',
                 },
+                {
+                    id: 'AmazingSpooderMen',
+                    password: 'InMyEyes123',
+                    img: '/logo192.png', // need to fill it.
+                    nickname: 'LegendarySpooder',
+                },
+                {
+                    id: 'GoofyVelociraptor',
+                    password: 'Raptor123',
+                    img: '/logo192.png', // need to fill it.
+                    nickname: 'Seriosuly?No',
+                },
             ]
 
           )

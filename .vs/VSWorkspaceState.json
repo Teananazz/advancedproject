@@ -10,6 +10,6 @@
     "\\src\\MessageScreen\\SoundRecordComponents",
     "\\src\\RegisterForm"
   ],
-  "SelectedNode": "\\src\\MessageScreen\\GroupListing.js",
+  "SelectedNode": "\\src\\MessageScreen\\SoundRecordComponents\\SoundRecordButton.js",
   "PreviewInSolutionExplorer": false
 }

@@ -13,10 +13,11 @@ import { useNavigate } from "react-router-dom";
 
 const LoginScreen =
     ({ Contacts }) => {
+        console.log("render login")
         const user = useInput("");
         const password = useInput("");
         const Eye = Eyehook("FillEye");
-        console.log(Contacts);
+       
         let navigate = useNavigate();
         const onAttempt =
             () => {

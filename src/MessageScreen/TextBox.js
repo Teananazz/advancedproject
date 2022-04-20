@@ -53,6 +53,12 @@ const TextBox =
 
                     <div className="input-group">
                         <div className="input-group-prepend">
+                            <button onClick={(e) => {
+                                console.log(Logs.Logs)
+                                
+                            }}
+                                className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>
+
 
                             <button onClick={() => { Logs.UpdateLocalLogs({ id }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
 
@@ -75,10 +81,10 @@ const TextBox =
 
                                 </div>
                             </div>
+
                            
                             <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing}/>
-                            
-                            
+                         
                         </div>
                     </div>
 

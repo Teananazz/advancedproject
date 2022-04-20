@@ -86,12 +86,9 @@ code {
 .flex-down {
     display:flex;
  position:relative;
-  
-  margin-top: 1vh;
-  right: auto;
-  margin-bottom: 15vh;
-  right: 0.25vw;
-  width: 20vw;
+
+
+ 
    
  
  
@@ -302,10 +299,6 @@ textarea[type=text] {
 }
 
 
-.Down {
-
-    
-}
 
 
 .Groups {
@@ -705,7 +698,12 @@ textarea[type=text] {
     .modal-content {
         width: 100%;
     }
+   
 }
+
+
+
+
 
 
 .MessageScreen {
@@ -788,31 +786,43 @@ textarea[type=text] {
 }
 
 .left {
-    display:flex;
-    align-self:center;
+    display: flex;
+   
+    margin:auto;
+    top: 0vh;
     
-     
-     width: 15vw;
-     
-     right: 19vw;
-    top: 15vh;
+  
     
-
+    background-color: initial;
+    width: 100%;
+    height: 20%;
+    
+    
 }
 
 .ButtonGroup {
-    position:absolute;
+    position: absolute;
     margin-top: 0px !important;
-    
-    
-
 }
 
 .Block {
-
     border-radius: 10px;
-    
+    background-color: rgb(32, 44, 51);
+}
 
+.LimitsMessages {
+   
+    position: absolute;
+    background-color: initial;
+    width: 13%;
+    height: 74%;
+    top: 16%;
+   left: 20%;
+    overflow-y: scroll;
+}
 
-
+@media only screen and (max-width:1900px) {
+    .LimitsMessages {
+        left: calc( 100%- 20vw);
+    }
 }

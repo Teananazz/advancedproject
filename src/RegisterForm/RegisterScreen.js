@@ -14,7 +14,8 @@ import UserContacts from '../CommonComponents/UserContacts'
 
 import { useNavigate } from "react-router-dom";
 const RegisterScreen =
-    ({ Contacts } ) => {
+    ({ Contacts }) => {
+        console.log("render")
         const user = useInput("")
         const password = useInput("")
         const passwordvalid = useInput("")
