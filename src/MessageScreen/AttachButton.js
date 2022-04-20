@@ -46,9 +46,9 @@ const AttachButton =
                             />
 
 
-                            <div id="ModalImg" class="modal">
+                            <div id="ModalImg" className="modal">
 
-                                <span class="close" onClick=
+                                <span className="close" onClick=
                                     {(e) => {
                                         var ModalImg = document.getElementById("ModalImg");
                                         ModalImg.style.display = "none"
@@ -56,7 +56,7 @@ const AttachButton =
                                     }}
 
                                 > &times; </span>
-                                <img class="modal-content" id="BigImg" />
+                                <img className="modal-content" id="BigImg" />
                             </div>
                         </>;
 

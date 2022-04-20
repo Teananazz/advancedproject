@@ -34,6 +34,7 @@ const LoginScreen =
                 }
 
                 alert("Connecting ") // just for checking - later will change
+                Contacts.UpdateCurrentUser(user.value);
                 
                 let path = 'App';
                 navigate(path);

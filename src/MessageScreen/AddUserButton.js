@@ -17,7 +17,7 @@ const AddUserButton =
                         <Modal.Title id="ModalType" >Adding new user </Modal.Title>
                     </Modal.Header>
                     <Modal.Body id="ModalBody">
-                        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label="User name" />
+                        <input className="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label="User name" />
 
                         <Button variant="secondary" id="Close" onClick={handleClose} />
                         <Button variant="primary" id="Add user" onClick={handleShow} />

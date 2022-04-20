@@ -17,7 +17,7 @@ const AddGroupButton =
 
         {/*  added value so that we can use e.target.value to know which user was focused
          *  OnClick we can't know the target value (i think) so i have to use focus.*/}
-        var Lisiting = List.Users.map((value) =>
+        var Lisiting = Input.ContactList.map((value) =>
             <Button id={value.id} key={value.id}
                 onFocus={(e) => {
                     Input.UpdateGroups({ value })

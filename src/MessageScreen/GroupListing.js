@@ -9,8 +9,9 @@ import Logs from '../CommonComponents/Logs'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useState } from 'react'
 const GroupListing =
-    ({ List }) => {
-       
+    ({ List, Contacts }) => {
+        
+
         const [Index, UpdateIndex] = useState("0");
 
         const Input = Texthook("");
@@ -47,6 +48,9 @@ const GroupListing =
                 return Chat_log?.LastMessage.get(id);
 
             }
+
+     
+        
 
         var Mapping = List.map((value) =>
             <div key={Math.random(1000) + 500} className="flex-down left margin-top">

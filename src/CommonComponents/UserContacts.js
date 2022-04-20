@@ -6,7 +6,6 @@ import {useState} from 'react'
 const UserContacts =
     () => {
 
-
         const [Users,UpdateUsers] = useState(
             [
                 {
@@ -41,9 +40,16 @@ const UserContacts =
                     img: '/logo192.png', // need to fill it.
                     nickname: 'Seriosuly?No',
                 },
+                {
+                    id: 'Vec',
+                    password: 'Ver',
+                    img: '/logo192.png', // need to fill it.
+                    nickname: 'Tryhard',
+                },
             ]
 
-          )
+        )
+        const[CurrentUser, UpdateCurrentUser] = useState("")
         const UpdateList =
             ({ userinfo, userpassword, img, displayval }) => {
                
@@ -56,9 +62,10 @@ const UserContacts =
                 
 
             }
+        
 
 
-        return ({ Users, UpdateList } )
+        return ({ Users, UpdateList, CurrentUser, UpdateCurrentUser } )
 
 
     }

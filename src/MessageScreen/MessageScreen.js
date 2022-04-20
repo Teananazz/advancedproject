@@ -13,7 +13,7 @@ const MessageScreen =
             <Container fluid>
                 <Row className ="background2">
                     <Col>
-                        <Groups class="heightIncrase" Contacts={Contacts} />
+                        <Groups className="heightIncrase" Contacts={Contacts} />
                         </Col>
                 </Row>
             </Container>

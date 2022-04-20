@@ -6,8 +6,13 @@ import { useState } from "react";
 
 const Grouphook = ({ Contacts }) => {
 
-    var [List, UpdateList] = useState([]);
-   var [ContactList, UpdateContactList] = useState(Contacts.Users)
+    const [List, UpdateList] = useState([]); // current shown groups
+
+
+    const FilteredArray = Contacts.Users.filter(value => value.id != Contacts.CurrentUser)
+  
+
+    const [ContactList, UpdateContactList] = useState(FilteredArray) // group canditates.
   
 
     const UniqueContact = ContactList.map((value) =>  value.id );
@@ -23,16 +28,19 @@ const Grouphook = ({ Contacts }) => {
             }
           
             var Index = UniqueContact.indexOf(value.id);
+           // Indeed, splice actually changes the original array. Later will change when i can force re-render.
+
+            var list = ContactList;
+            list.splice(Index, 1);
+
+            UpdateContactList(list)
            
-            ContactList.splice(Index, 1);  // Indeed, splice actually changes the original array.
-            UpdateContactList(ContactList)
-           
-           
-            UpdateList(List.concat(value));
-            List = List.concat(value);
+            list = List;
+
+            list = list.concat(value);
+            UpdateList(list);
+
           
-
-
 
         }
     

@@ -25,8 +25,11 @@ const TextBox =
 
         var Chat_Log = Logs.GiveLogs({id })
 
+        // TODO: add to logs indication who sent that message, and classname will be a variable depending on who sent it.
+        // Host messages for us, Server message for the other person.
+        // After that, we can copy logs in a decent way.
 
-        var Log = Chat_Log?.map((value) => <li key={Math.random().toString(36).substr(2, 9)} className="HostMessages">  {value}   </li>);
+       var Log = Chat_Log?.map((value) => <li key={Math.random().toString(36).substr(2, 9)} className="HostMessages">  {value}   </li>);
 
 
 
@@ -54,8 +57,12 @@ const TextBox =
                     <div className="input-group">
                         <div className="input-group-prepend">
                             <button onClick={(e) => {
-                                console.log(Logs.Logs)
-                                
+                                // write to js file
+                                console.log(Logs)
+
+
+
+
                             }}
                                 className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>
 
