@@ -85,7 +85,7 @@ const AttachButton =
                     var id = props.id;
                     props.Logs.UpdateFileLog({ id, FinalVal });
                     props.func();
-
+                    props.forceGroupListing();
                 }}
 
                 className="DropUpButtons cancelInput" id="inputGroupFile02" />
