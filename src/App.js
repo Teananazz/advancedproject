@@ -22,7 +22,7 @@ const App =
         <BrowserRouter>
             <Routes>
 
-                    {<Route path="/" element={  <LoginScreen Contacts={Contacts} /> } />}
+                    {<Route path="/" element={<LoginScreen Contacts={Contacts} />} />}
                   
                     {<Route path="Register" element={<RegisterScreen Contacts={Contacts} />} />}
 

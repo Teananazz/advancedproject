@@ -863,8 +863,8 @@ textarea[type=text] {
 }
 
 
-@media only screen and (max-width:1900px) {
+@media only screen and (max-width:1400px) {
     .LimitsMessages {
-        left: calc( 100%- 20vw);
+        left: calc( 50%- 15vw) !important;
     }
 }

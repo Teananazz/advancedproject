@@ -1,12 +1,15 @@
 
 import { useState } from 'react'
 import IconHandler from './IconHandler'
+import SavedLogs from '../CommonComponents/ScriptedLogs'
 const Logs =
     ( Input ) => {
 
         var today = new Date();
         var time;
         const [Logs, UpdateLogs] = useState(new Map());
+       
+      
 
         // TODO: ID : 0 -> host ID:1 -> from the contact.
         // for ease of making  a log example: do a button to switch ids
@@ -20,7 +23,11 @@ const Logs =
        
         const GiveLogs =
             ({ id }) => {
-              
+
+               
+
+
+
                 return Logs[id];
 
 

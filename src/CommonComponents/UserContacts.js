@@ -33,8 +33,44 @@ const ScriptedContacts = [
         id: 'Vec',
         password: 'Ver',
         img: '/logo192.png', // need to fill it.
-        nickname: 'Tryhard',
+        nickname: 'Chicken',
     },
+    {
+        id: 'MikeWaz',
+        password: 'admin',
+        img: '/logo192.png', // need to fill it.
+        nickname: 'Little',
+    },
+
+    {
+        id: 'Darud',
+        password: 'admin',
+        img: '/logo192.png', // need to fill it.
+        nickname: 'SandStorm',
+    },
+
+    {
+        id: 'Silve',
+        password: 'admin',
+        img: '/logo192.png', // need to fill it.
+        nickname: 'Ana',
+    },
+
+    {
+        id: 'Monkey',
+        password: 'admin',
+        img: '/logo192.png', // need to fill it.
+        nickname: 'Pres',
+    },
+    {
+        id: 'George',
+        password: 'admin',
+        img: '/logo192.png', // need to fill it.
+        nickname: 'Monna',
+    },
+
+
+
 ]
 
 
@@ -52,9 +88,16 @@ const UserContacts =
             [
                 {
                     id: 'Teanana',
-                    password: '123',
+                    password: '123a',
                     img:'/logo192.png' , // need to fill it.
                     nickname: 'choco',
+
+                },
+                {
+                    id: 'Galil',
+                    password: '1765b',
+                    img: '/logo192.png', // need to fill it.
+                    nickname: 'Leily',
 
                 },
                 

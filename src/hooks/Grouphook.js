@@ -6,7 +6,12 @@ import { useState } from "react";
 
 const Grouphook = ({ Contacts }) => {
 
-    const [List, UpdateList] = useState(UserContacts().ScriptedContacts); // current shown groups
+    var Filtered = UserContacts().ScriptedContacts.filter((value, index) => index >= 5);
+    var Filtered_else = UserContacts().ScriptedContacts.filter((value, index) => index < 5);
+
+    
+
+    const [List, UpdateList] = useState(Contacts.CurrentUser === 'Teanana'? Filtered: Filtered_else); // current shown groups
 
 
     const FilteredArray = Contacts.Users.filter(value => value.id != Contacts.CurrentUser)

@@ -55,21 +55,40 @@ const TextBox =
         // for some reason when the log of user log is of size one it detects it as string and therfore my entire function not works when i call map so i had to fix it.
         var Chat_Log = Logs.GiveLogs({ id })
 
+    
+      
       //  console.log(Chat_Log)
         if (Chat_Log != undefined) {
 
         }
+    
         
-        //var Log = Chat_Log?.map((value) => {
+        var Log = Chat_Log?.map((value) => {
 
 
-        //    return <li key={Math.random().toString(36).substr(2, 9)} className={giveStyle(value)}>  {value[1]}   </li>;
+            return <li key={Math.random().toString(36).substr(2, 9)} className={giveStyle(value)}>  {value[1]}   </li>;
 
 
-        //}
-        //);
+        }
+        );
+
+        
+
+        var scripted = "";
+
+        if (SavedLogs().giveArr(id) != undefined) {
+
+           var scripted=  SavedLogs().giveArr(id);
+            console.log(scripted);
+            if (Log == undefined) {
+                Log = "";
+            }
+         
+            
+        }
+
         SavedLogForProgram(Log);
-       var Log = SavedLogs();
+       
 
        
 
@@ -85,7 +104,9 @@ const TextBox =
 
                 <div className="Messages ">
                     <div className="Down flexes" >
-                        <ul className="list-group">  {Log}   </ul>
+                        <ul className="list-group">  {scripted}  {Log} </ul>
+
+                      
                     </div>
                 </div>
 

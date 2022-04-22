@@ -1,15 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
-    "\\src\\ChatScreen",
     "\\src\\CommonComponents",
     "\\src\\hooks",
-    "\\src\\LoginScreen",
     "\\src\\MessageScreen",
-    "\\src\\MessageScreen\\SoundRecordComponents",
-    "\\src\\RegisterForm"
+    "\\src\\MessageScreen\\SoundRecordComponents"
   ],
-  "SelectedNode": "\\src\\CommonComponents\\ScriptedLogs.js",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
