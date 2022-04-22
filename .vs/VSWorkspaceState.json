@@ -10,6 +10,6 @@
     "\\src\\MessageScreen\\SoundRecordComponents",
     "\\src\\RegisterForm"
   ],
-  "SelectedNode": "\\src\\LoginScreen\\LoginScreen.js",
+  "SelectedNode": "\\src\\CommonComponents\\ScriptedLogs.js",
   "PreviewInSolutionExplorer": false
 }

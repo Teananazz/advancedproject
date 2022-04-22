@@ -1,12 +1,12 @@
 
 
 import UserContacts from '../CommonComponents/UserContacts'
-
+import ScriptedLogs from '../CommonComponents/ScriptedLogs'
 import { useState } from "react";
 
 const Grouphook = ({ Contacts }) => {
 
-    const [List, UpdateList] = useState([]); // current shown groups
+    const [List, UpdateList] = useState(UserContacts().ScriptedContacts); // current shown groups
 
 
     const FilteredArray = Contacts.Users.filter(value => value.id != Contacts.CurrentUser)

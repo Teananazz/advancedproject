@@ -87,8 +87,8 @@ const SoundRecordButton =
                             <source src={AudioURL} />
                         </audio>
                     var id = props.id;
-
-                    props.Logs.UpdateSoundLog({id, FinalVal })
+                    var MessID= props.MessID;
+                    props.Logs.UpdateSoundLog({ id, FinalVal, MessID  })
                     props.func(); // re-renders TextBox (so it shows it instantly)
                     props.forceGroupListing();
                 }

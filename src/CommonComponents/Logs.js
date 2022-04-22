@@ -7,13 +7,21 @@ const Logs =
         var today = new Date();
         var time;
         const [Logs, UpdateLogs] = useState(new Map());
+
+        // TODO: ID : 0 -> host ID:1 -> from the contact.
+        // for ease of making  a log example: do a button to switch ids
+        // and also create a function that returns a different style depending on id.
+        // gg
+
+      
+
         const [LastMessageTime, UpdateLastMessageTime] = useState(new Map())
         const [LastMessage, UpdateLastMessage] = useState(new Map());
        
         const GiveLogs =
             ({ id }) => {
-
-                return Logs.get(id);
+              
+                return Logs[id];
 
 
             }
@@ -30,8 +38,8 @@ const Logs =
 
 
         const UpdateLocalLogs =
-            ({ id }) => {
-               
+            ({ id, MessID }) => {
+                
                  time = today.getHours() + ":" + today.getMinutes();   // last message time
               
                         if (Input.value === "") {
@@ -41,17 +49,28 @@ const Logs =
 
                    
 
-                        if (Logs.has(id) === false) {
+                if (Logs[id] === undefined) {
+                    console.log("YESSSS");
+                   
+                    var val = Input.value;
+                    Logs[id] = [[MessID, val]]
+                 
+                  
+
+                   
+                   
+
+                            //console.log(MessageIDMap);
 
 
 
-                            Logs.set(id, [])
+
                             LastMessageTime.set(id, time);
                             LastMessage.set(id, Input.value);
 
 
 
-                            Logs.get(id).push(Input.value);
+                         
                            
 
                            
@@ -66,10 +85,16 @@ const Logs =
                         }
 
                         Input.UpdateListUser({ id })
+                var val = Input.value;
 
+              
+                Logs[id].push([MessID, val]);
+                var Arr = [...Logs[id]];
+                console.log("Arr: " + Arr);
+               
+             
 
-
-                Logs.get(id).push(Input.value)
+               
 
                 LastMessageTime.set(id, time);
              
@@ -78,7 +103,7 @@ const Logs =
                 UpdateLogs(Logs);
                 UpdateLastMessage(LastMessage);
                 UpdateLastMessageTime(LastMessageTime);
-
+               
                
 
                         Input.setValue("")
@@ -94,16 +119,18 @@ const Logs =
             }
 
         const UpdateFileLog =
-            ({ id, FinalVal }) => {
+            ({ id, FinalVal, MessID }) => {
 
                  time = today.getHours() + ":" + today.getMinutes(); // last message time
 
-                if (Logs.has(id) === false) {
+                if (Logs[id] === undefined) {
 
               
 
-                    Logs.set(id, [])
-                    Logs.get(id).push(FinalVal)
+                    Logs[id] = [[MessID, FinalVal]]
+
+
+
                     LastMessageTime.set(id, time);
 
                     LastMessage.set(id, <div> {IconHandler("AttachFile")} </div>);
@@ -120,7 +147,7 @@ const Logs =
 
                 }
 
-                Logs.get(id).push(FinalVal)
+                Logs[id].push([MessID, FinalVal]);
                 LastMessageTime.set(id, time);
                 LastMessage.set(id, <div> {IconHandler("AttachFile")} </div>);
 
@@ -137,16 +164,16 @@ const Logs =
             }
 
         const UpdateSoundLog =
-            ({ id, FinalVal }) => {
+            ({ id, FinalVal, MessID }) => {
                  time = today.getHours() + ":" + today.getMinutes();
-                if (Logs.has(id) === false) {
+                if (Logs[id] === undefined) {
 
                     LastMessageTime.set(id, time);
                     LastMessage.set(id, <div> {IconHandler("Voice")} </div>);
 
-                    Logs.set(id, [])
+                    Logs[id] = [[MessID, FinalVal]]
 
-                    Logs.get(id).push(FinalVal)
+
                     UpdateLogs(Logs)
                     UpdateLastMessage(LastMessage);
                     UpdateLastMessageTime(LastMessageTime);
@@ -160,7 +187,8 @@ const Logs =
                 LastMessageTime.set(id, time);
                 LastMessage.set(id, <div> {IconHandler("Voice")} </div>);
 
-                Logs.get(id).push(FinalVal)
+
+                Logs[id].push([MessID, FinalVal]);
                 UpdateLogs(Logs)
                 UpdateLastMessage(LastMessage);
                 UpdateLastMessageTime(LastMessageTime);

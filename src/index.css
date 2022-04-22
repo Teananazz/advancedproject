@@ -225,11 +225,11 @@ textarea[type=text] {
     font-style: inherit;
     font-variant: inherit;
     font-weight: inherit;
-    flex-basis : auto;
+    flex-basis: auto;
     display: flex;
-    align-items : flex-start;
+    align-items: flex-start;
     flex: auto;
-    flex-direction:column;
+    flex-direction: column;
     align-content: flex-start;
     align-self: flex-start;
     justify-content: flex-end;
@@ -246,21 +246,21 @@ textarea[type=text] {
     position: relative;
     white-space: pre-line;
     border-radius: 20px !important;
+    list-style: none;
+    word-break: break-all;
 }
 
 
 
 .Messages {
     margin: auto;
-    
-   
     display: flex;
     background-color: rgb(32, 44, 51);
     border-radius: 42px;
     border-width: 0;
-    color: #FFFFFF;
+    color:white;
     cursor: auto;
-    flex-wrap: wrap;
+  
     justify-content: flex-start;
     flex: 1 1 auto;
     align-content: flex-start;
@@ -273,7 +273,8 @@ textarea[type=text] {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
     vertical-align: initial;
@@ -808,18 +809,59 @@ textarea[type=text] {
 .Block {
     border-radius: 10px;
     background-color: rgb(32, 44, 51);
+    box-sizing: border-box;
 }
 
 .LimitsMessages {
-   
     position: absolute;
     background-color: initial;
     width: 13%;
     height: 74%;
     top: 16%;
-   left: 20%;
-    overflow-y: scroll;
+    left: 20%;
+    overflow-y: auto;
+    box-sizing: border-box;
+
 }
+
+.ServerMessages {
+   margin:auto;
+    word-break: break-all;
+    padding: 6px 9px 8px 7px;
+    box-sizing: border-box;
+    white-space: pre-line;
+    list-style: none;
+    padding: 6px 9px 8px 7px;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    background-color: turquoise;
+    font-size: 30px;
+    font-variant: inherit;
+    font-weight: inherit;
+    flex-basis: auto;
+    display: flex;
+   
+    flex: auto;
+  
+    justify-content:flex-end;
+   
+ 
+    line-height: inherit;
+    margin: 0px;
+    margin-left: 34vw;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 42px;
+    direction: rtl;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    color: white;
+    font-size: 20px;
+    flex-direction: row-reverse !important;
+    position:relative;
+    
+}
+
 
 @media only screen and (max-width:1900px) {
     .LimitsMessages {

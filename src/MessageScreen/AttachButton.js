@@ -16,18 +16,20 @@ const AttachButton =
 
         <input
 
-                type="file" onChange={(e) => {
+                type="file" accept="*/*"  onChange={(e) => {
                     var SmallImg = document.getElementById("SmallImg");
                     var BigImg = document.getElementById("BigImg");
                     var ModalImg = document.getElementById("ModalImg");
-                  
+                   
 
 
 
-
+                    console.log(e);
             {/* Using different variables - is it faster ?*/ }
             var Val = e.target.files[0]
-            var Val2 = URL.createObjectURL(Val)
+                    var Val2 = URL.createObjectURL(Val)
+                   
+                    
                     var FinalVal =
                         <>
                             <img id="SmallImg" src={Val2} width="200" height="200" alt={Val.name}
@@ -60,11 +62,14 @@ const AttachButton =
                             </div>
                         </>;
 
-           
+                    var MessID = props.MessID;
             var id = props.id;
-            props.Logs.UpdateFileLog({ id, FinalVal });
+                    props.Logs.UpdateFileLog({ id, FinalVal, MessID });
                     props.func();
                     props.forceGroupListing();
+
+                    // so that it detects change even if it is the same picture twice in a row.
+                    e.target.value = null; 
 
           }}
 
@@ -83,9 +88,13 @@ const AttachButton =
                         <source src={Val2} type ="video/mp4" />
                             </video>
                     var id = props.id;
-                    props.Logs.UpdateFileLog({ id, FinalVal });
+                    var MessID = props.MessID;
+                    props.Logs.UpdateFileLog({ id, FinalVal, MessID });
                     props.func();
                     props.forceGroupListing();
+
+                    // so that it detects changes every file change ( even if it is the same video)
+                    e.target.value = null;
                 }}
 
                 className="DropUpButtons cancelInput" id="inputGroupFile02" />
