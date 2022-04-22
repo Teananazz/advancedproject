@@ -46,8 +46,15 @@ const Logs =
 
         const UpdateLocalLogs =
             ({ id, MessID }) => {
-                
-                 time = today.getHours() + ":" + today.getMinutes();   // last message time
+
+                if (today.getMinutes() < 10) {
+                    time = today.getHours() + ":0" + today.getMinutes();
+                }
+                else {
+                    time = today.getHours() + ":" + today.getMinutes();
+                }
+
+            // last message time
               
                         if (Input.value === "") {
                             alert("empty message"); // need to change it.
@@ -57,7 +64,7 @@ const Logs =
                    
 
                 if (Logs[id] === undefined) {
-                    console.log("YESSSS");
+                  
                    
                     var val = Input.value;
                     Logs[id] = [[MessID, val]]
@@ -96,8 +103,6 @@ const Logs =
 
               
                 Logs[id].push([MessID, val]);
-                var Arr = [...Logs[id]];
-                console.log("Arr: " + Arr);
                
              
 
@@ -128,7 +133,12 @@ const Logs =
         const UpdateFileLog =
             ({ id, FinalVal, MessID }) => {
 
-                 time = today.getHours() + ":" + today.getMinutes(); // last message time
+                if (today.getMinutes() < 10) {
+                    time = today.getHours() + ":0" + today.getMinutes();
+                }
+                else {
+                    time = today.getHours() + ":" + today.getMinutes();
+                }
 
                 if (Logs[id] === undefined) {
 
@@ -172,7 +182,12 @@ const Logs =
 
         const UpdateSoundLog =
             ({ id, FinalVal, MessID }) => {
-                 time = today.getHours() + ":" + today.getMinutes();
+                if (today.getMinutes() < 10) {
+                    time = today.getHours() + ":0" + today.getMinutes();
+                }
+                else {
+                    time = today.getHours() + ":" + today.getMinutes();
+                }
                 if (Logs[id] === undefined) {
 
                     LastMessageTime.set(id, time);

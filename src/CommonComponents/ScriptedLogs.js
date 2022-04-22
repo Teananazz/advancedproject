@@ -75,8 +75,8 @@ const SavedLogs =
 		const Logcheck9 =
 			<div>
 				<li className="ServerMessages"> hello my friend, how is the beach today? </li>
-				<li className="HostMessages">
-					<div id="ModalImg" className="modal"><span className="close"> &times </span><img className="modal-content" id="BigImg" /></div> </li>
+				
+					
 				<li className="HostMessages">  {/* */}great! I'll send you some waves sound{/* */} </li>
 				<li className="HostMessages">  <audio controls><source width="200" height="200" src="/waves sound.mp3" /></audio> </li><li className="ServerMessages">  {/* */}I wish I was there!{/* */} </li>
 			</div>
