@@ -10,7 +10,8 @@ import { FiUserPlus } from 'react-icons/fi'
 import { FcPicture} from 'react-icons/fc'
 import { FcCamcorderPro } from 'react-icons/fc'
 import { FcSpeaker } from 'react-icons/fc'
-
+import { BsFillMicFill} from 'react-icons/bs'
+import { RiStopMiniFill} from 'react-icons/ri'
 const IconHandle =
     (name) => {
         switch (name) {
@@ -38,7 +39,15 @@ const IconHandle =
             case ("Video"):
                 return(<FcCamcorderPro />);
             case ("Voice"):
-                return(<FcSpeaker />);
+                return (<FcSpeaker />);
+            case ("MicOn"): {
+
+                return (<BsFillMicFill />);
+            }
+            case ("MicOff"): {
+
+                return (<RiStopMiniFill />);
+            }
         }
      
     }

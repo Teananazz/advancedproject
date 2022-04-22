@@ -122,10 +122,19 @@ const SoundRecordButton =
                 }
 
             }
+        const GiveIcon =
+            () => {
 
+                if (RecordButton === 0) {
+                    return IconHandle("MicOn")
+                }
+                return IconHandle("MicOff");
+
+
+            }
         return (
             <>
-                <button onClick={(e)=> Func(e)} id="button-72" className="btn btn-outline-secondary" type="button">{IconHandle("Voice")}</button>
+                <button onClick={(e)=> Func(e)} id="button-72" className="btn btn-outline-secondary" type="button">{GiveIcon()}</button>
             </>
 
         )
