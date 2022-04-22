@@ -7,65 +7,65 @@ const ScriptedContacts = [
     {
         id: 'Sharon',
         password: 'qWe365',
-        img: '/logo192.png', // need to fill it
+        img: '/character1.png',
         nickname: 'moco',
 
     },
     {
         id: 'Dude',
         password: 'WhyYouAreLame32',
-        img: '/logo192.png', // need to fill it.
+        img: '/character2.png',
         nickname: 'lmao10',
     },
     {
         id: 'AmazingSpooderMen',
         password: 'InMyEyes123',
-        img: '/logo192.png', // need to fill it.
+        img: '/character3.png',
         nickname: 'LegendarySpooder',
     },
     {
         id: 'GoofyVelociraptor',
         password: 'Raptor123',
-        img: '/logo192.png', // need to fill it.
+        img: '/character4.png',
         nickname: 'Seriosuly?No',
     },
     {
         id: 'Vec',
         password: 'Ver',
-        img: '/logo192.png', // need to fill it.
+        img: '/character5.png',
         nickname: 'Chicken',
     },
     {
         id: 'MikeWaz',
         password: 'admin',
-        img: '/logo192.png', // need to fill it.
+        img: '/character6.png',
         nickname: 'Little',
     },
 
     {
         id: 'Darud',
         password: 'admin',
-        img: '/logo192.png', // need to fill it.
+        img: '/character7.png',
         nickname: 'SandStorm',
     },
 
     {
         id: 'Silve',
         password: 'admin',
-        img: '/logo192.png', // need to fill it.
+        img: '/character8.png',
         nickname: 'Ana',
     },
 
     {
         id: 'Monkey',
         password: 'admin',
-        img: '/logo192.png', // need to fill it.
+        img: '/character9.png',
         nickname: 'Pres',
     },
     {
         id: 'George',
         password: 'admin',
-        img: '/logo192.png', // need to fill it.
+        img: '/character10.png',
         nickname: 'Monna',
     },
 
@@ -89,14 +89,14 @@ const UserContacts =
                 {
                     id: 'Teanana',
                     password: '123a',
-                    img:'/logo192.png' , // need to fill it.
+                    img: '/character11.png',
                     nickname: 'choco',
 
                 },
                 {
-                    id: 'Galil',
-                    password: '1765b',
-                    img: '/logo192.png', // need to fill it.
+                    id: 'Gal',
+                    password: 'asd123',
+                    img: '/character12.png',
                     nickname: 'Leily',
 
                 },
