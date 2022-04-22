@@ -4,8 +4,6 @@ import {useRef} from 'react'
 const SavedLogs =
 	() => {
 
-		const logs = [Logcheck1, Logcheck2, Logcheck3, Logcheck4, Logcheck5]
-
 		const child1 = useRef(null)
 
 		
@@ -47,15 +45,46 @@ const SavedLogs =
 			<li className="HostMessages"> {/* */}great, you just have to watch this video!{/* */} </li>
 			<li className="HostMessages">  <video controls><source src="/illusions.mp4" width={100} height={100} /></video> </li>
 			<li className="ServerMessages"> {/* */}OMG I LOVE IT!{/* */} </li>
-		</div>		
+		</div>	
+		
+		const Logcheck6 =
+		<div>
+			<li className="ServerMessages"> {/* */}hi, where are you?{/* */} </li>
+			<li className="HostMessages"> {/* */}I'm on my way{/* */} </li>
+			<img id="SmallImg" src="/street.jpg" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
+			<li className="ServerMessages"> {/* */}ok cool, everybody is waiting for you{/* */} </li>
+		</div>
 
+		const Logcheck7 =
+		<div>
+			<li className="HostMessages"> {/* */}hi{/* */} </li>
+			<li className="HostMessages"> {/* */}when are you coming?{/* */} </li>
+			<li className="ServerMessages"> {/* */}I'm a little late, don't wait for me{/* */} </li>
+			<li className="HostMessages"> {/* */}are you sure? we can wait if you want{/* */} </li>
+			<li className="HostMessages"> {/* */}don't worry about it{/* */} </li>
+			<li className="ServerMessages"> {/* */}yes i'm sure, I'll be there by 20:00{/* */} </li>
+		</div>
+
+		const Logcheck8 =
+		<div>
+			<li className="ServerMessages"> {/* */}can you send me our picture?{/* */} </li>
+			<li className="HostMessages"> {/* */}sure! just a second{/* */} </li>
+			<img id="SmallImg" src="/two friends.jpg" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
+			<li className="ServerMessages"> {/* */}thanks!{/* */} </li>
+		</div>
 	
+
+		const logs = [Logcheck1, Logcheck2, Logcheck3, Logcheck4, Logcheck5, Logcheck6, Logcheck7, Logcheck8]
+
 		console.log(Logcheck1.props);
 		console.log(Logcheck2.props);
 		console.log(Logcheck3.props);
 		console.log(Logcheck4.props);
 		console.log(Logcheck5.props);
-		return (Logcheck4);
+		console.log(Logcheck6.props);
+		console.log(Logcheck7.props);
+		console.log(Logcheck8.props);
+		return (Logcheck8);
 
 
 
