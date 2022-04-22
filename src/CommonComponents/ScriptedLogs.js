@@ -36,7 +36,7 @@ const SavedLogs =
 		const Logcheck4 =
 		<div>
 			<li className="HostMessages"> {/* */}I miss you!{/* */} </li>
-			<img id="SmallImg" src="/heart.png" width={200} height={200} />
+			<img id="SmallImg" src="/heart.png" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
 			<li className="ServerMessages"> {/* */}I miss you too!{/* */} </li>
 			<li className="ServerMessages"> {/* */}we just need to finally meet again{/* */} </li>
 		</div>
@@ -55,7 +55,7 @@ const SavedLogs =
 		console.log(Logcheck3.props);
 		console.log(Logcheck4.props);
 		console.log(Logcheck5.props);
-		return (Logcheck3);
+		return (Logcheck4);
 
 
 
