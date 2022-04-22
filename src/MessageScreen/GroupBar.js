@@ -10,28 +10,18 @@ const AddGroupBar =
         return (
 
             <Container fluid="md">
-               
+
 
                 <Row>
                     <div className="AddGroupBar" >
-                       <Col>
-                           
-  
-                         <button className="btn btn-outline-secondary" type="button" id="GroupBarIcon">{IconHandle("3DGlasses")}</button>
-                                
-                       </Col>
-                        
-                            <Col>
-                                <button className="btn btn-outline-secondary" type="button" id="GroupBarButtons"> {IconHandle("AttachFile")}</button>
-                            </Col>
 
-                            <Col>
+                        <Col>
                             <AddGroupButton Input={Input} Contacts={Contacts} />
                         </Col>
-                        </div>
-                    </Row>
-               
-                   
+                    </div>
+                </Row>
+
+
             </Container>
         )
 
