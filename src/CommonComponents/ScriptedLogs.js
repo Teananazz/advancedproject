@@ -72,9 +72,32 @@ const SavedLogs =
 			<img id="SmallImg" src="/two friends.jpg" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
 			<li className="ServerMessages"> {/* */}thanks!{/* */} </li>
 		</div>
+
+		const Logcheck9 =
+		<div>
+			<li className="ServerMessages"> hello my friend, how is the beach today? </li>
+			<li className="HostMessages">
+			<div id="ModalImg" className="modal"><span className="close"> &times </span><img className="modal-content" id="BigImg" /></div> </li>
+			<li className="HostMessages">  {/* */}great! I'll send you some waves sound{/* */} </li>
+			<li className="HostMessages">  <audio controls><source src="/waves sound.mp3" /></audio> </li><li className="ServerMessages">  {/* */}I wish I was there!{/* */} </li>
+		</div>
+
+		const Logcheck10 =
+		<div>
+			<li className="HostMessages"> {/* */}I NEED YOU TO HELP ME{/* */} </li>
+			<li className="ServerMessages"> {/* */}what happend??{/* */} </li>
+			<li className="HostMessages"> {/* */}I'm stuck{/* */} </li>
+			<li className="HostMessages"> {/* */}I looked around and saw a cute cat{/* */} </li>
+			<li className="HostMessages"> {/* */}the cat came and sat on me{/* */} </li>
+			<li className="HostMessages"> {/* */}now I can't move{/* */} </li>
+			<li className="HostMessages"> {/* */}it is so sweet{/* */} </li>
+			<li className="HostMessages"> {/* */}help me{/* */} </li>
+			<img id="SmallImg" src="/cute cat.jpg" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
+			<li className="ServerMessages"> {/* */}I'm on my way!{/* */} </li>
+		</div>
 	
 
-		const logs = [Logcheck1, Logcheck2, Logcheck3, Logcheck4, Logcheck5, Logcheck6, Logcheck7, Logcheck8]
+		const logs = [Logcheck1, Logcheck2, Logcheck3, Logcheck4, Logcheck5, Logcheck6, Logcheck7, Logcheck8, Logcheck9, Logcheck10]
 
 		console.log(Logcheck1.props);
 		console.log(Logcheck2.props);
@@ -84,7 +107,9 @@ const SavedLogs =
 		console.log(Logcheck6.props);
 		console.log(Logcheck7.props);
 		console.log(Logcheck8.props);
-		return (Logcheck8);
+		console.log(Logcheck9.props);
+		console.log(Logcheck10.props);
+		return (Logcheck10);
 
 
 
