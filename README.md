@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# How to work with the project
+
+At first, you can register or login with one of the following users: 
+
+1:
+Username: Teanana
+Password: 123a
+
+2:
+Username: Gal
+Password: asd123
+
+Each user contains different 5 chats with unique histories (overall there are all kinds of messages- text, picture, video, voice).
+
+After the connection, you can add users by clicking on the button on the top left side of the screen.
+By clicking of one of the contacts you will be able to see the chat history and send new messages.
 
 Running Instruction:
 
