@@ -866,7 +866,6 @@ textarea[type=text] {
 .ServerMessages {
     margin:auto;
     word-break: break-word;
-    padding: 6px 9px 8px 7px;
     box-sizing: border-box;
     white-space: pre-line;
     list-style: none;
@@ -878,7 +877,7 @@ textarea[type=text] {
     font-variant: inherit;
     font-weight: inherit;
     flex-basis: auto;
-    display: flex;
+    display: outside;
    
     flex: auto;
   
