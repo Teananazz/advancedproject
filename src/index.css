@@ -248,7 +248,8 @@ textarea[type=text] {
     white-space: pre-line;
     border-radius: 20px !important;
     list-style: none;
-    word-break: break-all;
+    word-break: break-word;
+    margin-right: 34vw;
 }
 
 
@@ -808,11 +809,33 @@ textarea[type=text] {
 @media only screen and (max-height:768px) {
 
     .left {
-        height: 100%;
-        
+        height: 34vh;       
     }
 
-   
+    .background {       
+        width: 50%;
+        bottom: 2%;
+        left: 30%;
+    }
+
+    .Messages {
+        top: 20%;
+        width: 50%;
+        height: 60%;
+        left: 30%;
+    }
+
+    .TitleBar {
+        width: 50%;
+        left: 30%;
+        height: 10%;
+        top: 10%;
+    }
+
+    .AddGroupBar {
+        width: 14% !important;
+    }
+
 }
 
 
@@ -841,8 +864,8 @@ textarea[type=text] {
 }
 
 .ServerMessages {
-   margin:auto;
-    word-break: break-all;
+    margin:auto;
+    word-break: break-word;
     padding: 6px 9px 8px 7px;
     box-sizing: border-box;
     white-space: pre-line;
@@ -890,9 +913,4 @@ textarea[type=text] {
     
      height: 100%;
      bottom: 50%;
-    
-  
-
-
-
 }

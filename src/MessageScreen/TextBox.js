@@ -124,7 +124,8 @@ const TextBox =
 
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                    <button onClick={(e) => {
+                                    
+                                    {/*<button onClick={(e) => {
                                         // write to js file
                                         updateID(MessID == "0" ? "1" : "0");
 
@@ -132,7 +133,7 @@ const TextBox =
 
 
                                     }}
-                                        className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>
+                                className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>}*/}
 
 
                                     <button onClick={() => { Logs.UpdateLocalLogs({ id, MessID }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
