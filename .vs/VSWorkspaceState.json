@@ -8,6 +8,6 @@
     "\\src\\MessageScreen",
     "\\src\\MessageScreen\\SoundRecordComponents"
   ],
-  "SelectedNode": "\\src\\MessageScreen\\GroupListing.js",
+  "SelectedNode": "\\src\\hooks\\Grouphook.js",
   "PreviewInSolutionExplorer": false
 }

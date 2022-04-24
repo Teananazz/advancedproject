@@ -91,6 +91,7 @@ const SavedLogs =
 				<li className="HostMessages"> {/* */}now I can't move{/* */} </li>
 				<li className="HostMessages"> {/* */}it is so sweet{/* */} </li>
 				<li className="HostMessages"> {/* */}help me{/* */} </li>
+					<li className="HostMessages">  <video width="200" height="200" controls><source src="/illusions.mp4"  /></video> </li>
 				<img id="SmallImg" src="/cute cat.jpg" width={200} height={200} alt="willian-justen-de-vasconcellos-Bu9xrH0ufkI-unsplash.jpg" />
 				<li className="ServerMessages"> {/* */}I'm on my way!{/* */} </li>
 			</div>
