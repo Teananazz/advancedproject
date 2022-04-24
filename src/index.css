@@ -801,10 +801,21 @@ textarea[type=text] {
     
     background-color: initial;
     width: 100%;
-    height: 18vh;
+    height: 15vh;
     
     
 }
+@media only screen and (max-height:768px) {
+
+    .left {
+        height: 100%;
+        
+    }
+
+   
+}
+
+
 
 .ButtonGroup {
     position: absolute;
