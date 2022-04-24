@@ -69,27 +69,25 @@ const GroupListing =
             <Container>
                 <Row>
 
-                    <Col md="auto">
-                      
-                        
-                        {result}
-                        
-                       
+                   
 
-                    </Col>
-
-                    <Col xs={1}>
+                    <Col md="auto" >
                         <div key={Math.random(1000) + 500}      >
                             <div className="LimitsMessages">
                             {Mapping}
                                 </div>
                         </div>
 
-
+                      
 
 
                     </Col>
 
+                    <Col xs lg="2">
+
+                        {result}
+
+                    </Col>
 
                 </Row>
             </Container>

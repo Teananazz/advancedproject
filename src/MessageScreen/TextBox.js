@@ -7,6 +7,7 @@ import React from "react";
 import SoundRecordButton from '../MessageScreen/SoundRecordComponents/SoundRecordButton'
 import SavedLogs from '../CommonComponents/ScriptedLogs'
 import SavedLogForProgram from '../CommonComponents/SavedLogForProgram'
+import { Container, Row, Col } from 'react-bootstrap'
 
 // TODO :
 //1 . find out how to make blob work without activating createaddress.
@@ -22,7 +23,7 @@ const TextBox =
         // this is used to generate differnet styles depending on who sent the message.
         var [MessID, updateID] = useState("0");
 
-        
+
         {/* using these two to force this componenet to re-render once an img/sound/video is sent  */ }
         const [Index, UpdatedIndex] = useState("0");
         const ChangeTextBox =
@@ -31,38 +32,38 @@ const TextBox =
 
             }
 
-        
+
         const giveStyle =
             (Arr) => {
-               
-              
+
+
 
                 if (Arr[0] === undefined) {
                     return "";
                 }
                 if (Arr[0] === "0") {
 
-                   
+
                     return "HostMessages"
 
                 }
-                
+
                 return "ServerMessages"
 
             }
-       
-        
+
+
         // for some reason when the log of user log is of size one it detects it as string and therfore my entire function not works when i call map so i had to fix it.
         var Chat_Log = Logs.GiveLogs({ id })
 
-    
-      
-      //  console.log(Chat_Log)
+
+
+        //  console.log(Chat_Log)
         if (Chat_Log != undefined) {
 
         }
-    
-        
+
+
         var Log = Chat_Log?.map((value) => {
 
 
@@ -72,97 +73,104 @@ const TextBox =
         }
         );
 
-        
+
 
         var scripted = "";
 
         if (SavedLogs().giveArr(id) != undefined) {
 
-           var scripted=  SavedLogs().giveArr(id);
+            var scripted = SavedLogs().giveArr(id);
             console.log(scripted);
             if (Log == undefined) {
                 Log = "";
             }
-         
-            
+
+
         }
 
         SavedLogForProgram(Log);
-       
 
-       
+
+
 
         return (
 
+            <Container className ="ContainerText">
 
-            <>
-                <div class="TitleBar">
-                    {name}
-                    </div>
-
-
-
-                <div className="Messages ">
-                    <div className="Down flexes" >
-                        <ul className="list-group">  {scripted}  {Log} </ul>
-
-                      
-                    </div>
-                </div>
-
-
-                <div className="background">
-
-
-
-                    <div className="input-group">
-                        <div className="input-group-prepend">
-                            <button onClick={(e) => {
-                                // write to js file
-                                updateID(MessID == "0" ? "1" : "0");
-                                
-                               
-
-
-                            }}
-                                className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>
-
-
-                            <button onClick={() => {  Logs.UpdateLocalLogs({ id, MessID }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
-
+                <Row className="justify-content-md-center">
+                    <Col md="auto">
+                        <div class="TitleBar">
+                            {name}
                         </div>
-                        <textarea onKeyDown={(e) =>
-                        {
-                            if (e.key === "Enter") {
-                                Logs.UpdateLocalLogs({ id, MessID })
-                            }
-                        }
-                     }
-                            value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+                    </Col>
+                </Row>
 
-                        <div className="input-group-prepend">
+                <Row className="justify-content-md-center">
+                    <Col md="auto">
+                        <div className="Messages ">
+                            <div className="Down flexes" >
+                                <ul className="list-group">  {scripted}  {Log} </ul>
 
-                            <div className="dropup">
-                                <button className="dropbtn" id="button-72"> {IconHandle("AttachFile")}</button>
-                                <div className="dropup-content">
-                                    <AttachButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing} MessID={MessID} />
+
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+                <Row className="justify-content-md-center" >
+                    <Col md="auto">
+                        <div className="background">
+
+
+
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                    <button onClick={(e) => {
+                                        // write to js file
+                                        updateID(MessID == "0" ? "1" : "0");
+
+
+
+
+                                    }}
+                                        className="dropbtn" id="button-72" > {IconHandle("FiUserPlus")}</button>
+
+
+                                    <button onClick={() => { Logs.UpdateLocalLogs({ id, MessID }) }} className="btn btn-outline-secondary" type="button" id="button-72">{IconHandle("Airplane")}</button>
+
+                                </div>
+                                <textarea onKeyDown={(e) => {
+                                    if (e.key === "Enter") {
+                                        Logs.UpdateLocalLogs({ id, MessID })
+                                    }
+                                }
+                                }
+                                    value={Input.value} onChange={Input.onChange} name="check" autoCorrect="on" rows="1" cols=" 1" type="text" placeholder="Write your message" />
+
+                                <div className="input-group-prepend">
+
+                                    <div className="dropup">
+                                        <button className="dropbtn" id="button-72"> {IconHandle("AttachFile")}</button>
+                                        <div className="dropup-content">
+                                            <AttachButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing} MessID={MessID} />
+
+                                        </div>
+                                    </div>
+
+
+                                    <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing} MessID={MessID} />
 
                                 </div>
                             </div>
 
-                           
-                            <SoundRecordButton Logs={Logs} id={id} func={ChangeTextBox} forceGroupListing={ForceGroupListing} MessID={MessID}/>
-                         
+
                         </div>
-                    </div>
-
-
-                </div>
 
 
 
 
-
+                    </Col>
+                  
+                </Row>
 
 
 
@@ -174,7 +182,7 @@ const TextBox =
 
 
 
-            </>
+            </Container>
         )
 
 

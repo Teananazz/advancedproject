@@ -451,10 +451,14 @@ textarea[type=text] {
 }
 
 .HoldScreen {
-    display:flex;
+    display:grid;
     position: absolute;
     background-color: rgb(32, 44, 51);
     border-radius: 40px;
+    height: 100%;
+    left: 35%;
+ 
+    bottom: 10%;
     height: 70%;
     width: 40%;
    
@@ -818,7 +822,7 @@ textarea[type=text] {
     width: 13%;
     height: 74%;
     top: 16%;
-    left: 20%;
+    
     overflow-y: auto;
     box-sizing: border-box;
 
@@ -862,9 +866,20 @@ textarea[type=text] {
     
 }
 
+.check {
 
-@media only screen and (max-width:1400px) {
-    .LimitsMessages {
-        left: calc( 50%- 15vw) !important;
-    }
+    left: 100%;
+
+}
+
+.ContainerText {
+    display:grid;
+    position:absolute;
+    height: 100%;
+    bottom: 5%;
+    right: 33%;
+  
+
+
+
 }

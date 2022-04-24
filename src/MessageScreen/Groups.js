@@ -11,21 +11,22 @@ const Groups =
         
         return (
             
-            <Container fluid="md">
+          <>
                 
-                <Row >
-                    <Col md="auto" >
+                
+                    
                         <GroupBar Input={Input} Contacts={Contacts} />
 
-                    </Col>
+                   
 
-                    <Col md="auto">
-                        {<GroupListing List={Input.List} Contacts={Contacts} />}
-                        </Col>
-              
-                </Row>
-            </Container>
 
+
+                   
+                        <GroupListing List={Input.List} Contacts={Contacts} />
+                       
+                
+          
+                </>
 
            
         )
