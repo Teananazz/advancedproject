@@ -71,7 +71,7 @@ const GroupListing =
 
                    
 
-                    <Col md="auto" >
+                    <Col md="1" >
                         <div key={Math.random(1000) + 500}      >
                             <div className="LimitsMessages">
                             {Mapping}
@@ -83,7 +83,7 @@ const GroupListing =
 
                     </Col>
 
-                    <Col xs lg="2">
+                    <Col md="8">
 
                         {result}
 
