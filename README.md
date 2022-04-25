@@ -23,7 +23,7 @@ Running Instruction:
 
 1. git clone  https://github.com/Teananazz/advancedproject somewhere in your computer.
 2. enter advancedproejct folder in cmd and then write npm install
-3. open cmd in advancedproject foler and write npm start.
+3. open cmd in advancedproject folder and write npm start.
 
 ## Available Scripts
 
