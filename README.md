@@ -21,11 +21,9 @@ By clicking of one of the contacts you will be able to see the chat history and 
 
 Running Instruction:
 
-1 - Install React
-2. Install React-icons 
-3. Install React- bootstrap
-4. React- router (npm install react-router-dom --save)
-
+1. git clone  https://github.com/Teananazz/advancedproject somewhere in your computer.
+2. enter advancedproejct folder in cmd and then write npm install
+3. open cmd in advancedproject foler and write npm start.
 
 ## Available Scripts
 
